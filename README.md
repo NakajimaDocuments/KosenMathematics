@@ -1,2 +1,2 @@
 # KosenMathematics
-(c) H. NAKAJIMA
+(C) H. NAKAJIMA
