@@ -1,0 +1,345 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%	chap01 (確率)
+%===================================================================================================
+%	AUTHOR	H. NAKAJIMA
+%	DATE	2025/01
+%===================================================================================================
+%	EDIT HISTORY
+%	DATE		NAME			OVERVIEW
+%---------------------------------------------------------------------------------------------------
+%	2025/01		H. NAKAJIMA		Create new
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+{
+	\centering
+	{\textbf{第 1 章 \indent 確率}} \\
+}
+
+{\textbf{\S 1.2 \indent 確率の定義と性質}}
+
+\question{1}
+数字が 2 であるカードは 4 枚あるから
+\begin{align}
+	P(A) = \frac{4}{52} = \red{\frac{1}{13}}.
+\end{align}
+数字が 8 以下であるカードは 32 枚あるから
+\begin{align}
+	P(B) = \frac{32}{52} = \red{\frac{8}{13}}.
+\end{align}
+ハートの絵札は 3 枚 (ハートの Jack, Queen, King) あるから
+\begin{align}
+	P(C) = \red{\frac{3}{52}}.
+\end{align}
+
+\question{2}
+\begin{enumerate}
+	\item{
+		それぞれの硬貨が表である確率はそれぞれ $\dfrac{1}{2}$ であり, 求める確率はこれが同時に起こる確率だから
+		\begin{align}
+			\left(\frac{1}{2}\right)^{4} = \red{\frac{1}{16}}.
+		\end{align}
+	}
+	\item{
+		4 枚の硬貨のうち, 1 枚だけ表である場合は: 
+		\begin{quote}
+			表, 裏, 裏, 裏 \\
+			裏, 表, 裏, 裏 \\
+			裏, 裏, 表, 裏 \\
+			裏, 裏, 裏, 表
+		\end{quote}
+		の 4 通りである.
+		それぞれが起こる確率は
+		\begin{align}
+			\dfrac{1}{2}\cdot\left(\dfrac{1}{2}\right)^{3} = \dfrac{1}{16}
+		\end{align}
+		であるから
+		\begin{align}
+			4\cdot\dfrac{1}{16} = \red{\dfrac{1}{4}}.
+		\end{align}
+	}
+\end{enumerate}
+
+\question{3}
+1 回のジャンケンの A の結果は, 勝ち, あいこ, 負け の 3 通りだから $\red{\dfrac{1}{3}}$.
+
+\question{4}
+\begin{enumerate}
+	\item{
+		2 個のさいころの出る目の差は表のようになるから, $\dfrac{4}{36} = \red{\dfrac{1}{9}}$.
+		\begin{table}[H]
+			\centering
+			\begin{tabular}{c|cccccc}
+				  & 1 & 2 & 3 & 4 & 5 & 6 \\ \hline
+				1 & 0 & 1 & 2 & 3 & {\textbf{4}} & 5 \\
+				2 & 1 & 0 & 1 & 2 & 3 & {\textbf{4}} \\
+				3 & 2 & 1 & 0 & 1 & 2 & 3 \\
+				4 & 3 & 2 & 1 & 0 & 1 & 2 \\
+				5 & {\textbf{4}} & 3 & 2 & 1 & 0 & 1 \\
+				6 & 5 & {\textbf{4}} & 3 & 2 & 1 & 0 \\
+			\end{tabular}
+		\end{table}
+	}
+	\item{
+		2 個のさいころの出る目の和は表のようになるから, $\dfrac{3}{36} = \red{\dfrac{1}{12}}$.
+		\begin{table}[H]
+			\centering
+			\begin{tabular}{c|cccccc}
+				  & 1 & 2 & 3 & 4 & 5 & 6 \\ \hline
+				1 & 2 & 3 & 4 & 5 & 6 & 7 \\
+				2 & 3 & 4 & 5 & 6 & 7 & 8 \\
+				3 & 4 & 5 & 6 & 7 & 8 & 9 \\
+				4 & 5 & 6 & 7 & 8 & 9 & {\textbf{10}} \\
+				5 & 6 & 7 & 8 & 9 & {\textbf{10}} & 11 \\
+				6 & 7 & 8 & 9 & {\textbf{10}} & 11 & 12 \\
+			\end{tabular}
+		\end{table}
+	}
+\end{enumerate}
+
+\question{5}
+袋から同時に 4 個の玉を取り出す取り出し方は $\combi{8}{4} = 70$ 通りである.
+\begin{enumerate}
+	\item{
+		取り出した 4 個の玉がすべて白玉である場合は $\combi{5}{4} = 5$ 通りだから $\dfrac{5}{70} = \red{\dfrac{1}{14}}$.
+	}
+	\item{
+		取り出した 4 個の玉に白玉が 1 個だけ含まれる場合は
+		\begin{align}
+			\combi{5}{1}\cdot\combi{3}{3} = 5
+		\end{align}
+		より 5 通りだから $\dfrac{5}{70} = \red{\dfrac{1}{14}}$.
+	}
+	\item{
+		取り出した 4 個の玉に白玉が 2 個だけ含まれる場合は
+		\begin{align}
+			\combi{5}{2}\cdot\combi{3}{2} = 10\cdot3 = 30
+		\end{align}
+		より 30 通りだから $\dfrac{30}{70} = \red{\dfrac{3}{7}}$.
+	}
+\end{enumerate}
+
+\question{6}
+\begin{enumerate}
+	\item{
+		800 以上の奇数ができるのは, 1 枚目に 8 のカードを引き, 3 枚目に 1, 3, 5, 7 のいずれかのカードを引いた場合である.
+
+		1 枚目に 8 のカードを引き, 2 枚目に偶数, 3 枚目に奇数のカードを引く確率は
+		\begin{align}
+			\frac{1}{8}\cdot\frac{3}{7}\cdot\frac{4}{6} = \frac{1}{28}.
+		\end{align}
+		1 枚目に 8 のカードを引き, 2 枚目に奇数, 3 枚目に奇数のカードを引く確率は
+		\begin{align}
+			\frac{1}{8}\cdot\frac{4}{7}\cdot\frac{3}{6} = \frac{1}{28}.
+		\end{align}
+		すなわち, 求める確率はこれらの和をとって
+		\begin{align}
+			\frac{1}{28} + \frac{1}{28} = \red{\frac{1}{14}}.
+		\end{align}
+	}
+	\item{
+		200 以下の奇数ができるのは, 1 枚目に 1 のカードを引き, 3 枚目に 3, 5, 7 のいずれかのカードを引いた場合である.
+
+		1 枚目に 1 のカードを引き, 2 枚目に偶数, 3 枚目に奇数のカードを引く確率は
+		\begin{align}
+			\frac{1}{8}\cdot\frac{4}{7}\cdot\frac{3}{6} = \frac{1}{28}.
+		\end{align}
+		1 枚目に 1 のカードを引き, 2 枚目に奇数, 3 枚目に奇数のカードを引く確率は
+		\begin{align}
+			\frac{1}{8}\cdot\frac{3}{7}\cdot\frac{2}{6} = \frac{1}{56}.
+		\end{align}
+		すなわち, 求める確率はこれらの和をとって
+		\begin{align}
+			\frac{1}{28} + \frac{1}{56} = \red{\frac{3}{56}}.
+		\end{align}
+	}
+\end{enumerate}
+
+\question{7}
+4 個のさいころのうち, 3 個だけ同じ目になる場合は: 
+\begin{quote}
+	同, 同, 同, 異 \\
+	同, 同, 異, 同 \\
+	同, 異, 同, 同 \\
+	異, 同, 同, 同
+\end{quote}
+のような組み合わせの場合である.
+それぞれが起こる確率は
+\begin{align}
+	6\cdot\left(\frac{1}{6}\right)^{3}\cdot\frac{5}{6} = \frac{5}{216}
+\end{align}
+であるから
+\begin{align}
+	4\cdot\frac{5}{216} = \red{\frac{5}{54}}.
+\end{align}
+
+\question{8}
+\begin{align}
+	\frac{4623}{10000} = 0.4623 \simeq \red{0.46}.
+\end{align}
+
+\question{9}
+\begin{enumerate}
+	\item{
+		\begin{description}
+			\item[$A \cap B$]{
+				大きいさいころの目が奇数かつ, 出る目の和が偶数である事象 $\Leftrightarrow$ \red{大きいさいころの目が奇数, 小さいさいころの目が奇数である事象}.
+			}
+			\item[$\overline{B}$]{
+				\red{出る目の和が奇数である事象}.
+			}
+			\item[$\overline{A} \cap B$]{
+				大きいさいころの目が偶数かつ, 出る目の和が偶数である事象 $\Leftrightarrow$ \red{大きいさいころの目が偶数, 小さいさいころの目が偶数である事象}.
+			}
+			\item[$A \cup \overline{B}$]{
+				\red{大きいさいころの目が奇数または出る目の和が奇数}.
+			}
+		\end{description}
+	}
+	\item{
+		$(A \cup B) \cap C = \emptyset$ より $C = \overline{A \cup B} = \overline{A} \cap \overline{B}$ とすればよいから, 大きいさいころの目が偶数かつ, 出る目の和が奇数である事象 $\Leftrightarrow$ \red{大きいさいころの目が偶数, 小さいさいころの目が奇数}.
+	}
+\end{enumerate}
+
+\question{10}
+\begin{enumerate}
+	\item{
+		トランプ 52 枚のうち, 奇数のカードは 28 枚あるから
+		\begin{align}
+			P(A) = \frac{28}{52}\cdot\frac{27}{51} = \red{\frac{63}{221}}.
+		\end{align}
+	}
+	\item{
+		カードの数の和が 9 となるのは, 2 枚のカードの数が $(1, 8), (2, 7), (3, 6), (4, 5), (5, 4), (6, 3), (7, 2), (8, 1)$ の 8 通りであり, 2 枚のカードのスートの組み合わせが $4^{2} = 16$ 通りであるから
+		\begin{align}
+			P(B) = \frac{8\cdot16}{52\cdot51} = \red{\frac{32}{663}}.
+		\end{align}
+	}
+	\item{
+		奇数の和は偶数であり, 9 は奇数だから $A$ と $B$ は互いに排反であるから
+		\begin{align}
+			P(A\cup B) = P(A) + P(B) = \frac{63}{221} + \frac{32}{663} = \red{\frac{1}{3}}.
+		\end{align}
+	}
+\end{enumerate}
+
+\question{11}
+\begin{enumerate}
+	\item{
+		トランプ 52 枚のうち, 絵札のカードは 12 枚あるから
+		\begin{align}
+			\frac{12}{52}\cdot\frac{11}{51} = \red{\frac{11}{221}}.
+		\end{align}
+	}
+	\item{
+		``少なくとも 1 枚は絵札でない'' 事象の余事象は ``2 枚とも絵札である'' 事象であるから, (1) より
+		\begin{align}
+			1 - \frac{11}{221} = \red{\frac{210}{221}}.
+		\end{align}
+	}
+\end{enumerate}
+
+\question{12}
+$A$, $B$ の確率はそれぞれ $P(A) = \dfrac{5}{10}$, $P(B) = \dfrac{4}{10}$ である.
+\begin{enumerate}
+	\item{
+		10 枚のカードのうち, 奇数かつ素数であるカードは 3, 5, 7 だから, $A\cap B$ の確率は $P(A\cap B) = \dfrac{3}{10}$ である.
+		すなわち
+		\begin{align}
+			P(A\cup B) &= P(A) + P(B) - P(A\cap B) \\
+				&= \frac{5}{10} + \frac{4}{10} - \frac{3}{10} = \red{\frac{3}{5}}.
+		\end{align}
+	}
+	\item{
+		10 枚のカードのうち, 偶数かつ素数であるカードは 2 のみだから, $\overline{A}\cap B$ の確率は $P\left(\overline{A}\cap B\right) = \dfrac{1}{10}$ である.
+		すなわち
+		\begin{align}
+			P\left(\overline{A}\cup B\right) &= P\left(\overline{A}\right) + P(B) - P\left(\overline{A}\cap B\right) \\
+				&= \left(1 - \frac{5}{10}\right) + \frac{4}{10} - \frac{1}{10} = \red{\frac{4}{5}}.
+		\end{align}
+	}
+	\item{
+		10 枚のカードのうち, 奇数かつ素数でないカードは 1, 9 だから, $A\cap \overline{B}$ の確率は $P\left(A\cap\overline{B}\right) = \dfrac{2}{10}$ である.
+		すなわち
+		\begin{align}
+			P\left(A\cup\overline{B}\right) &= P(A) + P\left(\overline{B}\right) - P\left(A\cup\overline{B}\right) \\
+				&= \frac{5}{10} + \left(1 - \frac{4}{10}\right) - \frac{2}{10} = \red{\frac{9}{10}}.
+		\end{align}
+	}
+\end{enumerate}
+
+\question{13}
+\begin{enumerate}
+	\item{
+		3 枚の硬貨を投げ, 1 枚も表が出ない確率は $\left(\dfrac{1}{2}\right)^{3} = \dfrac{1}{8}$, 1 枚だけ表が出る確率は $3\cdot\left(\dfrac{1}{2}\right)^{3} = \dfrac{3}{8}$, 2 枚だけ表が出る確率は $3\cdot\left(\dfrac{1}{2}\right)^{3} = \dfrac{3}{8}$, 3 枚表が出る確率は $\left(\dfrac{1}{2}\right)^{3} = \dfrac{1}{8}$ である.
+		すなわち
+		\begin{align}
+			0\cdot\frac{1}{8} + 1\cdot\frac{3}{8} + 2\cdot\frac{3}{8} + 3\cdot\frac{1}{8} = \red{\frac{3}{2}}.
+		\end{align}
+	}
+	\item{
+		2 個のさいころの出る目の差は表のようになる.
+		\begin{table}[H]
+			\centering
+			\begin{tabular}{c|cccccc}
+				  & 1 & 2 & 3 & 4 & 5 & 6 \\ \hline
+				1 & 0 & 1 & 2 & 3 & 4 & 5 \\
+				2 & 1 & 0 & 1 & 2 & 3 & 4 \\
+				3 & 2 & 1 & 0 & 1 & 2 & 3 \\
+				4 & 3 & 2 & 1 & 0 & 1 & 2 \\
+				5 & 4 & 3 & 2 & 1 & 0 & 1 \\
+				6 & 5 & 4 & 3 & 2 & 1 & 0 \\
+			\end{tabular}
+		\end{table}
+		すなわち
+		\begin{align}
+			0\cdot\frac{6}{36} + 1\cdot\frac{10}{36} + 2\cdot\frac{8}{36} + 3\cdot\frac{6}{36} + 4\cdot\frac{4}{36} + 5\cdot\frac{2}{36} = \red{\frac{35}{18}}.
+		\end{align}
+	}
+\end{enumerate}
+
+\question{14}
+500 円の当たりくじを引く確率は $\dfrac{1}{12}$, 200 円の当たりくじを引く確率は $\dfrac{2}{12}$, はずれくじを引く確率は $\dfrac{9}{12}$ だから
+\begin{align}
+	500\cdot\frac{1}{12} + 200\cdot\frac{2}{12} + 0\cdot\frac{9}{12} = 75
+\end{align}
+より, \red{75 円}.
+
+\question{15}
+取り出した 2 枚のカードから $x$ の値を計算すると表のようになる.
+\begin{table}[H]
+	\centering
+	\begin{tabular}{c|cccccccccc}
+		   & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10 \\ \hline
+		 1 & - & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 &  9 \\
+		 2 & 1 & - & 1 & 2 & 3 & 4 & 5 & 6 & 7 &  8 \\
+		 3 & 2 & 1 & - & 1 & 2 & 3 & 4 & 5 & 6 &  7 \\
+		 4 & 3 & 2 & 1 & - & 1 & 2 & 3 & 4 & 5 &  6 \\
+		 5 & 4 & 3 & 2 & 1 & - & 1 & 2 & 3 & 4 &  5 \\
+		 6 & 5 & 4 & 3 & 2 & 1 & - & 1 & 2 & 3 &  4 \\
+		 7 & 6 & 5 & 4 & 3 & 2 & 1 & - & 1 & 2 &  3 \\
+		 8 & 7 & 6 & 5 & 4 & 3 & 2 & 1 & - & 1 &  2 \\
+		 9 & 8 & 7 & 6 & 5 & 4 & 3 & 2 & 1 & - &  1 \\
+		10 & 9 & 8 & 7 & 6 & 5 & 4 & 3 & 2 & 1 &  - \\
+	\end{tabular}
+\end{table}
+\begin{enumerate}
+	\item{
+		表より, $x = 2$ となる確率は
+		\begin{align}
+			\frac{16}{90} = \red{\frac{8}{45}}.
+		\end{align}
+	}
+	\item{
+		表より, $x = 6$ となる確率は
+		\begin{align}
+			\frac{8}{90} = \red{\frac{4}{45}}.
+		\end{align}
+	}
+	\item{
+		表より, $x$ の期待値は
+		\begin{align}
+			&1\cdot\frac{18}{90} + 2\cdot\frac{16}{90} + 3\cdot\frac{14}{90} + 4\cdot\frac{12}{90} + 5\cdot\frac{10}{90} \\
+				&\textbf{\indent\indent} + 6\cdot\frac{8}{90} + 7\cdot\frac{6}{90} + 8\cdot\frac{4}{90} + 9\cdot\frac{2}{90} \\
+			=& \red{\frac{11}{3}}.
+		\end{align}
+	}
+\end{enumerate}

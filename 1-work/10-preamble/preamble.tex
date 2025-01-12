@@ -11,16 +11,24 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \usepackage[top=20truemm, bottom=20truemm, left=20truemm, right=20truemm]{geometry}
 \usepackage{fancyhdr}
+\usepackage{here}
 \usepackage{amsmath, mathtools}
 \usepackage{color}
 \usepackage{tcolorbox}
 \usepackage{fancybox}
 
-% defined command
+%%% defined command
 \renewcommand{\indent}{\quad}
 \renewcommand{\labelenumi}{(\arabic{enumi})}
+\renewcommand{\labelenumii}{(\roman{enumii})}
 \newcommand{\red}[1]{\textcolor{red}{#1}}
-\def\question#1{\vspace{0.5\baselineskip} \noindent \ovalbox{\textbf{問#1}}}
+% \def\question#1{\vspace{0.5\baselineskip} \noindent \ovalbox{\textbf{問#1}} \indent}	% for text
+\def\question#1{\vspace{0.5\baselineskip} \noindent \textbf{#1} \indent}				% for work
+\def\another{\textbf{[別解] \indent}}
+
+%%% math command
+\def\combi#1#2{{{}_{#1}\mathrm{C}_{#2}}}
+\def\permu#1#2{{{}_{#1}\mathrm{P}_{#2}}}
 
 \pagestyle{fancy}
 \rhead{\titletext}
