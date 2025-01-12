@@ -12,24 +12,51 @@
 \usepackage[top=20truemm, bottom=20truemm, left=20truemm, right=20truemm]{geometry}
 \usepackage{fancyhdr}
 \usepackage{here}
-\usepackage{amsmath, mathtools}
+\usepackage{amsmath, amsthm, mathtools}
 \usepackage{color}
-\usepackage{tcolorbox}
+\usepackage{tcolorbox, framed}
 \usepackage{fancybox}
 
-%%% defined command
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% defined command
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \renewcommand{\indent}{\quad}
 \renewcommand{\labelenumi}{(\arabic{enumi})}
 \renewcommand{\labelenumii}{(\roman{enumii})}
 \newcommand{\red}[1]{\textcolor{red}{#1}}
+\definecolor{shadecolor}{gray}{0.80}
 % \def\question#1{\vspace{0.5\baselineskip} \noindent \ovalbox{\textbf{問#1}} \indent}	% for text
 \def\question#1{\vspace{0.5\baselineskip} \noindent \textbf{#1} \indent}				% for work
 \def\another{\textbf{[別解] \indent}}
+\def\basic{
+	\begin{tcolorbox}[boxrule = 0pt, top = 0pt, bottom = 0pt, colback = shadecolor, sharp corners]
+		\centering
+		{\textbf{Basic}}
+	\end{tcolorbox}
+}
+\def\check{
+	\begin{tcolorbox}[boxrule = 0pt, top = 0pt, bottom = 0pt, colback = shadecolor, sharp corners]
+		\centering
+		{\textbf{Check}}
+	\end{tcolorbox}
+}
+\def\stepup{
+	\begin{tcolorbox}[boxrule = 0pt, top = 0pt, bottom = 0pt, colback = shadecolor, sharp corners]
+		\centering
+		{\textbf{Step up}}
+	\end{tcolorbox}
+}
 
-%%% math command
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% math command
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\renewcommand{\proofname}{\textbf{証明}}
 \def\combi#1#2{{{}_{#1}\mathrm{C}_{#2}}}
 \def\permu#1#2{{{}_{#1}\mathrm{P}_{#2}}}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% header, footer
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \pagestyle{fancy}
 \rhead{\titletext}
 \cfoot{\thepage}

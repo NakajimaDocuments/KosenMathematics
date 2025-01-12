@@ -14,7 +14,9 @@
 	{\textbf{第 1 章 \indent 確率}} \\
 }
 
-{\textbf{\S 1.2 \indent 確率の定義と性質}}
+{\textbf{\S 1.1 \indent 確率の定義と性質}}
+
+\basic
 
 \question{1}
 数字が 2 であるカードは 4 枚あるから
@@ -74,7 +76,7 @@
 				3 & 2 & 1 & 0 & 1 & 2 & 3 \\
 				4 & 3 & 2 & 1 & 0 & 1 & 2 \\
 				5 & {\textbf{4}} & 3 & 2 & 1 & 0 & 1 \\
-				6 & 5 & {\textbf{4}} & 3 & 2 & 1 & 0 \\
+				6 & 5 & {\textbf{4}} & 3 & 2 & 1 & 0
 			\end{tabular}
 		\end{table}
 	}
@@ -89,7 +91,7 @@
 				3 & 4 & 5 & 6 & 7 & 8 & 9 \\
 				4 & 5 & 6 & 7 & 8 & 9 & {\textbf{10}} \\
 				5 & 6 & 7 & 8 & 9 & {\textbf{10}} & 11 \\
-				6 & 7 & 8 & 9 & {\textbf{10}} & 11 & 12 \\
+				6 & 7 & 8 & 9 & {\textbf{10}} & 11 & 12
 			\end{tabular}
 		\end{table}
 	}
@@ -208,7 +210,7 @@
 		\end{align}
 	}
 	\item{
-		カードの数の和が 9 となるのは, 2 枚のカードの数が $(1, 8), (2, 7), (3, 6), (4, 5), (5, 4), (6, 3), (7, 2), (8, 1)$ の 8 通りであり, 2 枚のカードのスートの組み合わせが $4^{2} = 16$ 通りであるから
+		カードの数の和が 9 となるのは, 2 枚のカードの数が $(1, 8)$, $(2, 7)$, $(3, 6)$, $(4, 5)$, $(5, 4)$, $(6, 3)$, $(7, 2)$, $(8, 1)$ の 8 通りであり, 2 枚のカードのスートの組み合わせが $4^{2} = 16$ 通りであるから
 		\begin{align}
 			P(B) = \frac{8\cdot16}{52\cdot51} = \red{\frac{32}{663}}.
 		\end{align}
@@ -286,7 +288,7 @@ $A$, $B$ の確率はそれぞれ $P(A) = \dfrac{5}{10}$, $P(B) = \dfrac{4}{10}$
 				3 & 2 & 1 & 0 & 1 & 2 & 3 \\
 				4 & 3 & 2 & 1 & 0 & 1 & 2 \\
 				5 & 4 & 3 & 2 & 1 & 0 & 1 \\
-				6 & 5 & 4 & 3 & 2 & 1 & 0 \\
+				6 & 5 & 4 & 3 & 2 & 1 & 0
 			\end{tabular}
 		\end{table}
 		すなわち
@@ -339,7 +341,217 @@ $A$, $B$ の確率はそれぞれ $P(A) = \dfrac{5}{10}$, $P(B) = \dfrac{4}{10}$
 		\begin{align}
 			&1\cdot\frac{18}{90} + 2\cdot\frac{16}{90} + 3\cdot\frac{14}{90} + 4\cdot\frac{12}{90} + 5\cdot\frac{10}{90} \\
 				&\textbf{\indent\indent} + 6\cdot\frac{8}{90} + 7\cdot\frac{6}{90} + 8\cdot\frac{4}{90} + 9\cdot\frac{2}{90} \\
-			=& \red{\frac{11}{3}}.
+				=& \red{\frac{11}{3}}.
 		\end{align}
 	}
+\end{enumerate}
+
+\vspace{\baselineskip}
+\check
+
+\question{16}
+\begin{enumerate}
+	\item{
+		偶数の玉は 2, 4, 6, 8 の 4 個だから $\red{\dfrac{4}{9}}$.
+	}
+	\item{
+		3 の倍数の玉は 3, 6, 9 の 3 個だから $\dfrac{3}{9} = \red{\dfrac{1}{3}}$.
+	}
+\end{enumerate}
+
+\question{17}
+\begin{enumerate}
+	\item{
+		出る目の積が 12 となるのは $(2, 6)$, $(3, 4)$, $(4, 3)$, $(6, 2)$ の 4 通りだから $\dfrac{4}{36} = \red{\dfrac{1}{9}}$.
+	}
+	\item{
+		出る目の和が 10 となるのは $(4, 6)$, $(5, 5)$, $(5, 6)$, $(6, 4)$, $(6, 5)$, $(6, 6)$ の 6 通りだから $\dfrac{6}{36} = \red{\dfrac{1}{6}}$.
+	}
+\end{enumerate}
+
+\question{18}
+\begin{enumerate}
+	\item{
+		5 本の当たりくじのうち 3 本を同時に引ければよいから
+		\begin{align}
+			\frac{5}{20}\cdot\frac{4}{19}\cdot\frac{3}{18} = \red{\frac{1}{114}}.
+		\end{align}
+	}
+	\item{
+		2 本が当たり 1 本が外れる場合は $\dfrac{\permu{3}{3}}{\permu{2}{2}} = 3$ 通りあり, それぞれが起こる確率は
+		\begin{align}
+			\frac{5}{20}\cdot\frac{4}{19}\cdot\frac{15}{18} = \frac{5}{114}
+		\end{align}
+		であるから, 求める確率は
+		\begin{align}
+			3\cdot\frac{5}{114} = \red{\frac{5}{38}}.
+		\end{align}
+	}
+\end{enumerate}
+
+\question{19}
+\begin{enumerate}
+	\item[(i)]{
+		``偶-偶-偶'' の順にカードを取り出す確率は
+		\begin{align}
+			\frac{4}{9}\cdot\frac{3}{8}\cdot\frac{2}{7} = \frac{24}{504}.
+		\end{align}
+	}
+	\item[(ii)]{
+		``偶-奇-偶'' または ``奇-偶-偶'' の順にカードを取り出す確率は
+		\begin{align}
+			\frac{4}{9}\cdot\frac{5}{8}\cdot\frac{3}{7} + \frac{5}{9}\cdot\frac{4}{8}\cdot\frac{3}{7} = \frac{120}{504}.
+		\end{align}
+	}
+	\item[(iii)]{
+		``奇-奇-偶'' の順にカードを取り出す確率は
+		\begin{align}
+			\frac{5}{9}\cdot\frac{4}{8}\cdot\frac{4}{7} = \frac{80}{504}.
+		\end{align}
+	}
+\end{enumerate}
+以上より
+\begin{align}
+	\frac{24}{504} + \frac{120}{504} + \frac{80}{504} = \red{\frac{4}{9}}.
+\end{align}
+
+\question{20}
+``男-男'' が選ばれる確率は
+\begin{align}
+	\frac{8}{14}\cdot\frac{7}{13} = \frac{56}{182}
+\end{align}
+であり, ``女-女'' が選ばれる確率は
+\begin{align}
+	\frac{6}{14}\cdot\frac{5}{13} = \frac{30}{182}
+\end{align}
+であるから
+\begin{align}
+	\frac{56}{182} + \frac{30}{182} = \red{\frac{43}{91}}.
+\end{align}
+
+\question{21}
+\begin{enumerate}
+	\item{
+		\begin{enumerate}
+			\item{
+				赤玉が 0 個である確率は
+				\begin{align}
+					\frac{5}{12}\cdot\frac{4}{11}\cdot\frac{3}{10}\cdot\frac{2}{9} = \frac{120}{11880}.
+				\end{align}
+			}
+			\item{
+				赤玉が 1 個である場合は $\dfrac{\permu{4}{4}}{\permu{3}{3}} = 4$ 通りあり, それぞれが起こる確率は
+				\begin{align}
+					\frac{7}{12}\cdot\frac{5}{11}\cdot\frac{4}{10}\cdot\frac{3}{9} = \frac{420}{11880}
+				\end{align}
+				であるから, 赤玉が 1 個である確率は
+				\begin{align}
+					4\cdot\frac{420}{11880} = \frac{1680}{11880}.
+				\end{align}
+			}
+		\end{enumerate}
+		以上より, 求める確率は
+		\begin{align}
+			\frac{120}{11880} + \frac{1680}{11880} = \red{\frac{5}{33}}.
+		\end{align}
+	}
+	\item{
+		``少なくとも 1 個は赤玉である'' 事象の余事象は ``赤玉が 0 個である'' 事象であるから, (1)-(i) より
+		\begin{align}
+			1 - \frac{120}{11880} = \red{\frac{98}{99}}.
+		\end{align}
+	}
+\end{enumerate}
+
+\question{22}
+$A$, $B$ の確率はそれぞれ $P(A) = \dfrac{50}{100}$, $P(B) = \dfrac{33}{100}$ である.
+\begin{enumerate}
+	\item{
+		カードの数字が 6 の倍数である確率だから
+		\begin{align}
+			P(A\cap B) = \frac{16}{100} = \red{\frac{4}{25}}.
+		\end{align}
+	}
+	\item{
+		(1) より
+		\begin{align}
+			P(A\cup B) &= P(A) + P(B) - P(A\cap B) \\
+				&= \frac{50}{100} + \frac{33}{100} - \frac{16}{100} = \red{\frac{67}{100}}.
+		\end{align}
+	}
+	\item{
+		$A\cap\overline{B}$ は 2 倍数のうち 6 の倍数を除いた事象だから, その確率は
+		\begin{align}
+			P\left(A\cap\overline{B}\right) = \frac{50}{100} - \frac{16}{100} = \frac{34}{100}.
+		\end{align}
+		よって
+		\begin{align}
+			P\left(A\cup\overline{B}\right) &= P(A) + P\left(\overline{B}\right) - P\left(A\cap\overline{B}\right) \\
+				&= \frac{50}{100} + \left(1 - \frac{33}{100}\right) - \frac{34}{100} = \red{\frac{83}{100}}.
+		\end{align}
+	}
+\end{enumerate}
+
+\question{23}
+\begin{enumerate}
+	\item[(i)]{
+		赤玉をちょうど 1 個取り出す取り出し方は $\dfrac{\permu{3}{3}}{\permu{2}{2}} = 3$ 通りあり, それぞれの確率は
+		\begin{align}
+			\frac{3}{10}\cdot\frac{7}{9}\cdot\frac{6}{8} = \frac{126}{720}
+		\end{align}
+		だから, 赤玉をちょうど 1 個取り出す確率は
+		\begin{align}
+			3\cdot\frac{126}{720} = \frac{378}{720}.
+		\end{align}
+	}
+	\item[(ii)]{
+		赤玉をちょうど 2 個取り出す取り出し方は $\dfrac{\permu{3}{3}}{\permu{2}{2}} = 3$ 通りあり, それぞれの確率は
+		\begin{align}
+			\frac{3}{10}\cdot\frac{2}{9}\cdot\frac{7}{8} = \frac{42}{720}
+		\end{align}
+		だから, 赤玉をちょうど 2 個取り出す確率は
+		\begin{align}
+			3\cdot\frac{42}{720} = \frac{126}{720}.
+		\end{align}
+	}
+	\item[(iii)]{
+		赤玉を 3 個取り出す確率は
+		\begin{align}
+			\frac{3}{10}\cdot\frac{2}{9}\cdot\frac{1}{8} = \frac{6}{720}.
+		\end{align}
+	}
+\end{enumerate}
+以上より, 賞金額の期待値は
+\begin{align}
+	100\cdot\frac{378}{720} + 200\cdot\frac{126}{720} + 300\cdot\frac{6}{720} = 90
+\end{align}
+より, \red{90 円}.
+
+\question{24}
+2 個のさいころの出た目から $x$ の値を計算すると表のようになる.
+\begin{table}[H]
+	\centering
+	\begin{tabular}{c|cccccc}
+		  & 1 & 2 & 3 & 4 & 5 & 6 \\ \hline
+		1 & 2 & 3 & 0 & 1 & 2 & 3 \\
+		2 & 3 & 0 & 1 & 2 & 3 & 0 \\
+		3 & 0 & 1 & 2 & 3 & 0 & 1 \\
+		4 & 1 & 2 & 3 & 0 & 1 & 2 \\
+		5 & 2 & 3 & 0 & 1 & 2 & 3 \\
+		6 & 3 & 0 & 1 & 2 & 3 & 0
+	\end{tabular}
+\end{table}
+\begin{enumerate}
+	\item{
+		表より, $x = 0$ となる確率は
+		\begin{align}
+			\frac{9}{36} = \red{\frac{1}{4}}.
+		\end{align}
+	}
+	\item{
+		表より, $x$ の期待値は
+		\begin{align}
+			0\cdot\frac{9}{36} + 1\cdot\frac{8}{36} + 2\cdot\frac{9}{36} + 3\cdot\frac{10}{36} = \red{\frac{9}{14}}.
+		\end{align}
+		}
 \end{enumerate}
