@@ -13,6 +13,7 @@
 \usepackage{fancyhdr}
 \usepackage{here}
 \usepackage{amsmath, amsthm, mathtools}
+\usepackage{enumitem}
 \usepackage{color}
 \usepackage{tcolorbox, framed}
 \usepackage{fancybox}
@@ -21,29 +22,38 @@
 % defined command
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \renewcommand{\indent}{\quad}
-\renewcommand{\labelenumi}{(\arabic{enumi})}
-\renewcommand{\labelenumii}{(\roman{enumii})}
+\renewcommand{\footnotesize}{\normalsize}
+\renewcommand{\labelenumi}{\textbf{\arabic{enumi}}~}
+\renewcommand{\labelenumii}{(\arabic{enumii})}
+\renewcommand{\labelenumiii}{(\roman{enumiii})}
 \newcommand{\red}[1]{\textcolor{red}{#1}}
 \definecolor{shadecolor}{gray}{0.80}
+
 % \def\question#1{\vspace{0.5\baselineskip} \noindent \ovalbox{\textbf{問#1}} \indent}	% for text
 \def\question#1{\vspace{0.5\baselineskip} \noindent \textbf{#1} \indent}				% for work
 \def\another{\textbf{[別解] \indent}}
 \def\basic{
-	\begin{tcolorbox}[boxrule = 0pt, top = 0pt, bottom = 0pt, colback = shadecolor, sharp corners]
+	\begin{tcolorbox}[boxrule = 0pt, top = 0pt, bottom = 0pt, colback = shadecolor]
 		\centering
 		{\textbf{Basic}}
 	\end{tcolorbox}
 }
 \def\check{
-	\begin{tcolorbox}[boxrule = 0pt, top = 0pt, bottom = 0pt, colback = shadecolor, sharp corners]
+	\begin{tcolorbox}[boxrule = 0pt, top = 0pt, bottom = 0pt, colback = shadecolor]
 		\centering
 		{\textbf{Check}}
 	\end{tcolorbox}
 }
 \def\stepup{
-	\begin{tcolorbox}[boxrule = 0pt, top = 0pt, bottom = 0pt, colback = shadecolor, sharp corners]
+	\begin{tcolorbox}[boxrule = 0pt, top = 0pt, bottom = 0pt, colback = shadecolor]
 		\centering
 		{\textbf{Step up}}
+	\end{tcolorbox}
+}
+\def\plus{
+	\begin{tcolorbox}[boxrule = 0pt, top = 0pt, bottom = 0pt, colback = shadecolor]
+		\centering
+		{\textbf{Plus}}
 	\end{tcolorbox}
 }
 
@@ -67,3 +77,17 @@
 \setlength{\mathindent}{10pt}
 
 \mathtoolsset{showonlyrefs=true}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% environment
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcounter{enumimemory}
+\setcounter{enumimemory}{0}
+\newenvironment{qenumerate}{
+	\begin{enumerate}
+	\setcounter{enumi}{\value{enumimemory}}
+	\setlength{\itemsep}{10pt}
+}{
+	\setcounter{enumimemory}{\value{enumi}}
+	\end{enumerate}
+}
