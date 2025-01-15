@@ -1158,3 +1158,300 @@
 		\end{enumerate}
 	}
 \end{qenumerate}
+
+\vspace{\baselineskip}
+\check
+\begin{qenumerate}
+	\item{
+		\begin{enumerate}
+			\item{
+				奇数のカードを引く確率は
+				\begin{align}
+					P(A) = \frac{25}{50} = \red{\frac{1}{2}}.
+				\end{align}
+			}
+			\item{
+				奇数のカードのうち, 3 の倍数は 3, 9, 15, 21, 27, 33, 39, 45 だから
+				\begin{align}
+					P_{A}(B) = \red{\frac{8}{25}}.
+				\end{align}
+			}
+			\item{
+				奇数かつ 3 の倍数のうち, 5 の倍数は 15, 45 だから
+				\begin{align}
+					P_{A\cap B}(C) = \frac{2}{8} = \red{\frac{1}{4}}.
+				\end{align}
+			}
+			\item{
+				奇数かつ 3 の倍数を引く確率 $P(A\cap B)$ は
+				\begin{align}
+					P(A\cap B) = \frac{8}{50} = \frac{4}{25}.
+				\end{align}
+				すなわち, 確率の乗法定理より
+				\begin{align}
+					P(A\cap B\cap C) = P(A\cap B)P_{A\cap B}(C) = \frac{4}{25}\cdot\frac{1}{4} = \red{\frac{1}{25}}.
+				\end{align}
+			}
+		\end{enumerate}
+	}
+	\item{
+		\begin{enumerate}
+			\item{
+				A が当たりくじを 1 本も引かない確率は
+				\begin{align}
+					\frac{2}{5}\cdot\frac{1}{4} = \frac{1}{10}
+				\end{align}
+				だから, 求める確率は
+				\begin{align}
+					1 - \frac{1}{10} = \red{\frac{9}{10}}.
+				\end{align}
+			}
+			\item{
+				A が当たりくじを 2 本引く確率は
+				\begin{align}
+					\frac{3}{5}\cdot\frac{2}{4} = \frac{3}{10}.
+				\end{align}
+				この時点のくじの状態は ``3 本のくじの中に当たりくじが 1 本ある'' 状態である.
+				この状態から B が 1 本目に当たりくじを引く確率は $\dfrac{1}{3}$ であり, 2 本目に当たりくじを引く確率は
+				\begin{align}
+					\frac{2}{3}\cdot\frac{1}{2} = \frac{1}{3}
+				\end{align}
+				である.
+				したがって, 求める確率は
+				\begin{align}
+					\frac{3}{10}\cdot\left(\frac{1}{3} + \frac{1}{3}\right) = \red{\frac{1}{5}}.
+				\end{align}
+			}
+			\item{
+				A が当たりくじを 1 本だけ引く引き方は, ``当たりくじ, はずれくじ'' の並べ方を考えると $\permu{2}{2} = 2$ 通りである.
+				``当たりくじ, はずれくじ'' の順で引く確率は
+				\begin{align}
+					\frac{3}{5}\cdot\frac{2}{4} = \frac{3}{10}
+				\end{align}
+				であり, ``はずれくじ, 当たりくじ'' の順で引く確率は
+				\begin{align}
+					\frac{2}{5}\cdot\frac{3}{4} = \frac{3}{10}
+				\end{align}
+				であるから, A が当たりくじを 1 本だけ引く確率は
+				\begin{align}
+					\frac{3}{10} + \frac{3}{10} = \frac{3}{5}.
+				\end{align}
+				この時点のくじの状態は ``3 本のくじの中に当たりくじが 2 本ある'' 状態であり, B は必ず 当たりくじを引くことができるから, 求める確率は $\red{\dfrac{3}{5}}$.
+
+				\another
+				後半の議論について, A が当たりくじを 1 本だけ引いた状態で B が当たりくじを 1 本も引かない確率は
+				\begin{align}
+					\frac{1}{3}\cdot\frac{0}{2} = 0
+				\end{align}
+				となり, B が少なくとも 1 本当たりくじを引く確率は
+				\begin{align}
+					1 - 0 = 1.
+				\end{align}
+				したがって, 求める確率は
+				\begin{align}
+					\frac{3}{5}\cdot 1 = \red{\frac{3}{5}}.
+				\end{align}
+			}
+			\item{
+				(1) より, A が当たりくじを 1 本も引かない確率は $\dfrac{1}{10}$ であり, この場合は B は必ず当たりくじを引くことができる.
+				また, (2), (3) より, A が当たりくじを引き, B も当たりくじを引く確率は明らかだから, 求める確率は
+				\begin{align}
+					\frac{1}{10} + \frac{1}{5} + \frac{3}{5} = \red{\frac{9}{10}}.
+				\end{align}
+			}
+		\end{enumerate}
+	}
+	\item{
+		$A$ は, 1 回目の目が 1 であり, 2, 3 回目の目は任意だから $A$ の起こる確率は
+		\begin{align}
+			P(A) = \frac{1}{6}\cdot\frac{6}{6}\cdot\frac{6}{6} = \frac{1}{6}.
+		\end{align}
+		$B$ は, 2 回目の目が 1 であり, 1, 3 回目の目は任意だから $B$ の起こる確率は
+		\begin{align}
+			P(B) = \frac{6}{6}\cdot\frac{1}{6}\cdot\frac{6}{6} = \frac{1}{6}.
+		\end{align}
+		$C$ は, 3 回続けて 1 の目がでるから $C$ の起こる確率は
+		\begin{align}
+			P(C) = \frac{1}{6}\cdot\frac{1}{6}\cdot\frac{1}{6} = \frac{1}{6^{3}}.
+		\end{align}
+		\begin{enumerate}
+			\item{
+				$A\cap B$ の確率は, 1 回目と 2 回目の目がともに 1 であり, 3 回目の目は任意だから
+				\begin{align}
+					P(A\cap B) = \frac{1}{6}\cdot\frac{1}{6}\cdot\frac{6}{6} = \frac{1}{6^{2}}.
+				\end{align}
+				すなわち
+				\begin{abstract}
+					P(A\cap B) = P(A)P(B)
+				\end{abstract}
+				が成り立つから $A$ と $B$ は\red{互いに独立である}.
+			}
+			\item{
+				$B\cap C$ の確率は, $B\subset C$ より
+				\begin{align}
+					P(B\cap C) = P(C) = \frac{1}{6^{3}}.
+				\end{align}
+				すなわち
+				\begin{align}
+					P(B\cap C)\neq P(B)P(C)
+				\end{align}
+				が成り立つから $B$ と $C$ は\red{互いに独立でない}.
+			}
+			\item{
+				$C\cap A$ の確率は, $A\subset C$ より
+				\begin{align}
+					P(C\cap A) = P(C) = \frac{1}{6^{3}}.
+				\end{align}
+				すなわち
+				\begin{align}
+					P(C\cap A)\neq P(C)P(A)
+				\end{align}
+				が成り立つから $C$ と $A$ は\red{互いに独立でない}.
+			}
+		\end{enumerate}
+	}
+	\item{
+		\begin{enumerate}
+			\item{
+				復元抽出で引く場合, 求める確率は
+				\begin{align}
+					\frac{3}{8}\cdot\frac{3}{8} = \red{\frac{9}{64}}.
+				\end{align}
+			}
+			\item{
+				非復元抽出で引く場合, 求める確率は
+				\begin{align}
+					\frac{3}{8}\cdot\frac{2}{7} = \red{\frac{3}{28}}.
+				\end{align}
+			}
+		\end{enumerate}
+	}
+	\item{
+		\begin{enumerate}
+			\item{
+				\begin{enumerate}
+					\item{
+						ちょうど 3 回表が出る場合: \\
+						ちょうど 3 回表が出る出方は ``表, 表, 表, 裏, 裏'' の並べ替えを考えると $\dfrac{\permu{5}{5}}{\permu{3}{3}\cdot\permu{2}{2}} = 10$ 通りである.
+						それぞれが起こる確率は
+						\begin{align}
+							\left(\frac{1}{2}\right)^{3}\cdot\left(\frac{1}{2}\right)^{2} = \frac{1}{2^{5}}
+						\end{align}
+						だから, ちょうど 3 回表が出る確率は
+						\begin{align}
+							10\cdot\frac{1}{2^{5}} = \frac{10}{2^{5}}.
+						\end{align}
+					}
+					\item{
+						ちょうど 4 回表が出る場合: \\
+						ちょうど 4 回表が出る出方は ``表, 表, 表, 表, 裏'' の並べ替えを考えると $\dfrac{\permu{5}{5}}{\permu{4}{4}} = 5$ 通りである.
+						それぞれが起こる確率は
+						\begin{align}
+							\left(\frac{1}{2}\right)^{4}\cdot\frac{1}{2} = \frac{1}{2^{5}}
+						\end{align}
+						だから, ちょうど 4 回表が出る確率は
+						\begin{align}
+							5\cdot\frac{1}{2^{5}} = \frac{5}{2^{5}}.
+						\end{align}
+					}
+					\item{
+						5 回とも表が出る場合: \\
+						5 回とも表が出る確率は
+						\begin{align}
+							\left(\frac{1}{2}\right)^{2} = \frac{1}{2^{5}}.
+						\end{align}
+					}
+				\end{enumerate}
+				以上より, 求める確率は
+				\begin{align}
+					\frac{10}{2^{5}} + \frac{5}{2^{5}} + \frac{1}{2^{5}} = \red{\frac{1}{2}}.
+				\end{align}
+
+				\another
+				3 回以上表が出る事象を $A$ と表す.
+				$A$ の余事象 $\overline{A}$ は ``表が出る回数が 2 回以下'' であり, これは ``裏が 3 回以上出る'' と同値である.
+				硬貨を投げて表が出る確率と裏が出る確率は等しいから, $A$ の確率と $\overline{A}$ の確率は等しい.
+				以上より
+				\begin{align}
+					\begin{cases}
+						P(A) + P\left(\overline{A}\right) = 1 \\
+						P(A) = P\left(\overline{A}\right)
+					\end{cases}
+					\quad\Leftrightarrow\quad
+					P(A) = P\left(\overline{A}\right) = \frac{1}{2}.
+				\end{align}
+				すなわち, 求める確率は $\red{\dfrac{1}{2}}$.
+			}
+			\item{
+				1 回も裏が出ない (5 回とも表が出る) 確率は (1)-(iii) より $\dfrac{1}{2^{5}}$ だから, 求める確率は
+				\begin{align}
+					1 - \frac{1}{2^{5}} = \red{\frac{31}{32}}.
+				\end{align}
+			}
+		\end{enumerate}
+	}
+	\item{
+		A, B の 2 人が 1 回じゃんけんをしたとき, A が勝つ確率を考える.
+		A は $\dfrac{1}{3}$ の確率で ``グー'' を出し, この場合は B が ``チョキ'' を出したときに勝つことができるから, A が ``グー'' を出して B に勝つ確率は
+		\begin{align}
+			\frac{1}{3}\cdot\frac{1}{3} = \frac{1}{9}.
+		\end{align}
+		A が ``チョキ'', ``パー'' を出した場合の確率も同様だから, A が勝つ確率は
+		\begin{align}
+			\frac{1}{9} + \frac{1}{9} + \frac{1}{9} = \frac{1}{3}.
+		\end{align}
+		また, B が勝つ確率についても同様に $\dfrac{1}{3}$ である.
+		\begin{enumerate}
+			\item{
+				A が 3 回勝つことによって勝負がつく確率は
+				\begin{align}
+					\left(\frac{1}{3}\right)^{3} = \frac{1}{27}
+				\end{align}
+				であり, B についても同様だから, 求める確率は
+				\begin{align}
+					\frac{1}{27} + \frac{1}{27} = \red{\frac{2}{27}}.
+				\end{align}
+			}
+			\item{
+				\begin{enumerate}
+					\item{
+						4 回目のじゃんけんで勝負がつく確率: \\
+						4 回目のじゃんけんで A が勝者になる場合の試行の進み方は, 1 回目から 3 回目のじゃんけんについて ``A の勝ち, A の勝ち, A の勝ち以外\footnote{``A の負け'' または, ``あいこ''.}'' の並べ替えを考えると $\dfrac{\permu{3}{3}}{\permu{2}{2}} = 3$ 通りある.
+						それぞれが起こる確率は, 4 回目のじゃんけんで A が勝つ確率も考慮すると
+						\begin{align}
+							\underbrace{\left(\frac{1}{3}\right)^{2}\cdot\frac{2}{3}}_{\mathclap{\text{1--3 回目のじゃんけん}}}\cdot\overbrace{\frac{1}{3}}^{\mathclap{\text{4 回目のじゃんけん}}} = \frac{2}{81}
+						\end{align}
+						となるから, 4 回目で A が勝者になる確率は
+						\begin{align}
+							3\cdot\frac{2}{81} = \frac{2}{27}.
+						\end{align}
+						一方, 4 回目のじゃんけんで B が勝者になる確率も同様だから, 4 回目のじゃんけんで勝負がつく確率は
+						\begin{align}
+							\frac{2}{27} + \frac{2}{27} = \frac{4}{27}.
+						\end{align}
+					}
+					\item{
+						5 回目のじゃんけんで勝負がつく確率: \\
+						5 回目のじゃんけんで A が勝者になる場合の試行の進み方は, 1 回目から 4 回目のじゃんけんについて ``A の勝ち, A の勝ち, A の勝ち以外, A の勝ち以外'' の並べ替えを考えると $\dfrac{\permu{4}{4}}{\permu{2}{2}\cdot\permu{2}{2}} = 6$ 通りある.
+						それぞれが起こる確率は, 5 回目のじゃんけんで A が勝つ確率も考慮すると
+						\begin{align}
+							\underbrace{\left(\frac{1}{3}\right)^{2}\cdot\left(\frac{2}{3}\right)^{2}}_{\mathclap{\text{1--4 回目のじゃんけん}}}\cdot\overbrace{\frac{1}{3}}^{\mathclap{\text{5 回目のじゃんけん}}} = \frac{4}{243}
+						\end{align}
+						となるから, 5 回目で A が勝者になる確率は
+						\begin{align}
+							6\cdot\frac{4}{243} = \frac{8}{81}.
+						\end{align}
+						一方, 5 回目のじゃんけんで B が勝者になる確率も同様だから, 5 回目のじゃんけんで勝負がつく確率は
+						\begin{align}
+							\frac{8}{81} + \frac{8}{81} = \frac{16}{81}.
+						\end{align}
+					}
+				\end{enumerate}
+				求める確率は, 3 回目または 4 回目または 5 回目で勝負がつく確率だから, (1), (i), (ii) より
+				\begin{align}
+					\frac{2}{27} + \frac{4}{27} + \frac{16}{81} = \red{\frac{34}{81}}.
+				\end{align}
+			}
+		\end{enumerate}
+	}
+\end{qenumerate}
