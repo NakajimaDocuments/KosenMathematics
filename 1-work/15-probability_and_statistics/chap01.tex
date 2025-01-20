@@ -1455,3 +1455,254 @@
 		\end{enumerate}
 	}
 \end{qenumerate}
+
+\vspace{\baselineskip}
+\stepup
+\begin{qenumerate}
+	\item{
+		A, B, C のいずれかの袋を任意に選ぶ確率は $\dfrac{1}{3}$ であり, 選んだ袋からそれぞれ白玉を取り出す確率を考える.
+		A を選んだ場合は
+		\begin{align}
+			\frac{1}{3}\cdot\frac{2}{5} = \frac{2}{15}, 
+		\end{align}
+		B を選んだ場合は
+		\begin{align}
+			\frac{1}{3}\cdot\frac{1}{5} = \frac{1}{15}, 
+		\end{align}
+		C を選んだ場合は
+		\begin{align}
+			\frac{1}{3}\cdot\frac{3}{5} = \frac{3}{15}.
+		\end{align}
+		これらは互いに排反だから, 求める確率は
+		\begin{align}
+			\frac{2}{15} + \frac{1}{15} + \frac{3}{15} = \red{\frac{2}{5}}.
+		\end{align}
+	}
+	\item{
+		題意より, A の箱を選ぶ確率は $\dfrac{1}{6}$, B の箱を選ぶ確率は $\dfrac{2}{6}$, C の箱を選ぶ確率は $\dfrac{3}{6}$ である.
+		選んだ箱から当たりくじを引く確率は, A を選んだ場合は
+		\begin{align}
+			\frac{1}{6}\cdot\frac{4}{10} = \frac{4}{60}, 
+		\end{align}
+		B を選んだ場合は
+		\begin{align}
+			\frac{2}{6}\cdot\frac{3}{10} = \frac{6}{60}, 
+		\end{align}
+		C を選んだ場合は
+		\begin{align}
+			\frac{3}{6}\cdot\frac{2}{10} = \frac{6}{60}.
+		\end{align}
+		これらは互いに排反だから, 求める確率は
+		\begin{align}
+			\frac{4}{60} + \frac{6}{60} + \frac{6}{60} = \red{\frac{4}{15}}.
+		\end{align}
+	}
+	\item{
+		\begin{enumerate}
+		\item{
+			A, B, C の 3 製品とも不良品である確率は
+			\begin{align}
+				\frac{1}{100}\cdot\frac{1.5}{100}\cdot\frac{0.5}{100} = \red{\frac{3}{4000000}}.
+			\end{align}
+		}
+		\item{
+			A, B のみ不良品であり, C は不良品でない確率は
+			\begin{align}
+				\frac{1}{100}\cdot\frac{1.5}{100}\cdot\left(1 - \frac{0.5}{100}\right) = \frac{149.25}{1000000}, 
+			\end{align}
+			B, C のみ不良品であり, A は不良品でない確率は
+			\begin{align}
+				\frac{1.5}{100}\cdot\frac{0.5}{100}\cdot\left(1 - \frac{1}{100}\right) = \frac{74.25}{1000000}, 
+			\end{align}
+			C, A のみ不良品であり, B は不良品でない確率は
+			\begin{align}
+				\frac{0.5}{100}\cdot\frac{1}{100}\cdot\left(1 - \frac{1.5}{100}\right) = \frac{49.25}{1000000}.
+			\end{align}
+			以上より, 求める確率は
+			\begin{align}
+				\frac{149.25}{1000000} + \frac{74.25}{1000000} + \frac{49.25}{1000000} = \red{\frac{1091}{4000000}}.
+			\end{align}
+		}
+		\item{
+			3 製品とも不良品でない確率は
+			\begin{align}
+				\left(1 - \frac{1}{100}\right)\left(1 - \frac{1.5}{100}\right)\left(1 - \frac{0.5}{100}\right) = \frac{3881097}{4000000}.
+			\end{align}
+			したがって, 求める確率は
+			\begin{align}
+				1 - \frac{3881097}{4000000} = \red{\frac{118903}{4000000}}.
+			\end{align}
+		}
+		\end{enumerate}
+	}
+	\item{
+		選手が 1 回目に命中させる事象を $A$, 2 回目に命中させる事象を $B$ とするとき, 題意より $P_{A}(B) = 0.7$, $P_{\overline{A}}(B) = 0.5$, $P(B) = 0.6$ である.
+		ここで, $P(B)$ について
+		\begin{align}
+			P(B) = P(A\cap B) + P\left(\overline{A}\cap B\right)
+		\end{align}
+		が成り立ち, 確率の乗法定理より
+		\begin{align}
+			P(B) &= P(A)P_{A}(B) + P\left(\overline{A}\right)P_{\overline{A}}(B) \\
+				&= P(A)P_{A}(B) + (1 - P(A))P_{\overline{A}}(B) \\
+				&= P(A)\left(P_{A}(B) - P_{\overline{A}}(B)\right) + P_{\overline{A}}(B)
+		\end{align}
+		である.
+		すなわち
+		\begin{align}
+			P(A) &= \frac{P(B) - P_{\overline{A}}(B)}{P_{A}(B) - P_{\overline{A}}(B)} = \frac{0.6 - 0.5}{0.7 - 0.5} = \red{0.5}.
+		\end{align}
+	}
+	\item{
+		A が当たる事象を $A$, B が当たる事象を $B$ とすると, 題意より $P(A) = \dfrac{b}{a}$ である.
+		A が当たりくじを引いた場合, B は ``$a - 1$ 本の中に当たりが $b - 1$ 本含まれているくじ'' を引くことになるから, B が当たりくじを引く確率は $P_{A}(B) = \dfrac{b - 1}{a - 1}$ である.
+		A が当たりくじを引かなかった場合, B は ``$a - 1$ 本の中に当たりが $b$ 本含まれているくじ'' をひくことになるから, B が当たりくじを引く確率は $P_{\overline{A}}(B) = \dfrac{b}{a - 1}$ である.
+		ここで, $P(B)$ について
+		\begin{align}
+			P(B) = P(A\cap B) + P\left(\overline{A}\cap B\right)
+		\end{align}
+		が成り立つから, 確率の乗法定理より
+		\begin{align}
+			P(B) &= P(A)P_{A}(B) + P\left(\overline{A}\right)P_{\overline{A}}(B) \\
+				&= P(A)P_{A}(B) + (1 - P(A))P_{\overline{A}}(B) \\
+				&= P(A)\left(P_{A}(B) - P_{\overline{A}}(B)\right) + P_{\overline{A}}(B) \\
+				&= \frac{b}{a}\cdot\left(\frac{b - 1}{a - 1} - \frac{b}{a - 1}\right) + \frac{b}{a - 1} \\
+				&= \red{\frac{b}{a}}.
+		\end{align}
+	}
+	\item{
+		\begin{proof}
+			$A$ が起こる確率は $P(A) = \dfrac{1}{2}$ である.
+			硬貨を 2 回投げたときの表と裏の組み合わせは, ``表, 表'', ``表, 裏'', ``裏, 表'', ``裏, 裏'' のいずれかになるから, $B$ が起こる確率は $P(B) = \dfrac{3}{4}$ である.
+			また, $A$ が起こるとき, $B$ も必ず起こるから $P(A\cap B) = \dfrac{1}{2}$.
+			以上より
+			\begin{align}
+				P(A\cap B) \neq P(A)P(B)
+			\end{align}
+			が成り立つから, $A$, $B$ は互いに独立でない.
+		\end{proof}
+	}
+	\item{
+		\begin{enumerate}
+			\item{
+				$A$ が起こる確率は $P(A) = \dfrac{2}{4}$, $B$ が起こる確率は $P(B) = \dfrac{2}{4}$ である.
+				また, $A\cap B$ が起こる確率は $P(A\cap B) = \dfrac{1}{4}$ であるから
+				\begin{align}
+					P(A\cap B) = P(A)P(B)
+				\end{align}
+				が成り立つ.
+				すなわち, $A$ と $B$ は\red{互いに独立である}.
+			}
+			\item{
+				$A$ が起こる確率は $P(A) = \dfrac{3}{4}$, $B$ が起こる確率は $P(B) = \dfrac{3}{4}$ である.
+				また, $A\cap B$ が起こる確率は $P(A\cap B) = \dfrac{2}{4}$ であるから
+				\begin{align}
+					P(A\cap B) \neq P(A)P(B)
+				\end{align}
+				が成り立つ.
+				すなわち, $A$ と $B$ は\red{互いに独立でない}.
+			}
+		\end{enumerate}
+	}
+	\item{
+		\begin{enumerate}
+			\item{
+				$A$ が起こる確率は $P(A) = \dfrac{21}{36}$, $B$ が起こる確率は $P(B) = \dfrac{18}{36}$ である.
+				また, $A\cap B$ が起こる確率は $P(A\cap B) = \dfrac{10}{36}$ であるから
+				\begin{align}
+					P(A\cap B) \neq P(A)P(B)
+				\end{align}
+				が成り立つ.
+				すなわち, $A$ と $B$ は\red{互いに独立でない}.
+			}
+			\item{
+				$A$ が起こる確率は $P(A) = \dfrac{21}{36}$, $B$ が起こる確率は $P(B) = \dfrac{24}{36}$ である.
+				また, $A\cap B$ が起こる確率は $P(A\cap B) = \dfrac{14}{36}$ であるから
+				\begin{align}
+					P(A\cap B) = P(A)P(B)
+				\end{align}
+				が成り立つ.
+				すなわち, $A$ と $B$ は\red{互いに独立である}.
+			}
+			\item{
+				$A$ が起こる確率は $P(A) = \dfrac{21}{36}$, $B$ が起こる確率は $P(B) = \dfrac{m + n}{36}$ である ($m\leq 21$, $n\leq15$).
+				また, $A\cap B$ が起こる確率は $P(A\cap B) = \dfrac{m}{36}$ である.
+				$A$ と $B$ が互いに独立であるとき
+				\begin{align}
+					P(A\cap B) = P(A)P(B)
+				\end{align}
+				が成り立つから
+				\begin{align}
+					\frac{m}{36} = \frac{21}{36}\cdot\frac{m + n}{36} \quad&\Leftrightarrow\quad 5m = 7n \\
+						&\Leftrightarrow\quad m:n = 7:5.
+				\end{align}
+				$m\leq 21$, $n\leq15$ より
+				\begin{align}
+					\red{(7, 5), (14, 10), (21, 15)}.
+				\end{align}
+			}
+		\end{enumerate}
+	}
+	\item{
+		最初に取り出した玉が赤玉である事象を $A_{1}$, 白玉である事象を $A_{2}$ とすると, A として赤玉が入った袋が選ばれる確率と白玉が入った袋が選ばれる確率は等しいから
+		\begin{align}
+			P\left(A_{1}\right) = P\left(A_{2}\right) = \frac{1}{2}.
+		\end{align}
+		2 回目に取り出した玉が赤玉である事象を $B$ とすると
+		\begin{align}
+			B = \left(A_{1}\cap B\right)\cup\left(A_{2}\cap B\right).
+		\end{align}
+		題意より, $A_{1}$ が起こると A の袋の中は ``赤玉が 5 個, 白玉が 5 個'' の状態だから
+		\begin{align}
+			P_{A_{1}}(B) = \frac{5}{10}, 
+		\end{align}
+		$A_{2}$ が起こると A の袋の中は ``赤玉が 3 個, 白玉が 7 個'' の状態だから
+		\begin{align}
+			P_{a_{2}}(B) = \frac{3}{10}.
+		\end{align}
+		ここで, $A_{1}\cap B$ と $A_{2}\cap B$ は互いに排反だから
+		\begin{align}
+			P(B) &= P\left(\left(A_{1}\cap B\right)\cup\left(A_{2}\cap B\right)\right) \\
+				&= P\left(A_{1}\cap B\right) + P\left(A_{2}\cap B\right)
+		\end{align}
+		であり, 確率の乗法定理より
+		\begin{align}
+			P(B) &= P\left(A_{1}\right)P_{A_{1}}(B) + P\left(A_{2}\right)P_{A_{2}}(B) \\
+				&=\frac{1}{2}\cdot\frac{5}{10} + \frac{1}{2}\cdot\frac{3}{10} = \red{\frac{2}{5}}.
+		\end{align}
+	}
+	\item{
+		\begin{enumerate}
+			\item{
+				点 P の $x$ 座標が 3 となるのは, 硬貨を 3 回投げたときである.
+				硬貨を 3 回投げて点 P の $y$ 座標が 3 となるのは, 表が 2 回, 裏が 1 回出る場合である.
+				この出方は $\dfrac{\permu{3}{3}}{\permu{2}{2}} = 3$ 通りであり, それぞれが起こる確率は
+				\begin{align}
+					\left(\frac{1}{2}\right)^{2}\cdot\frac{1}{2} = \frac{1}{8}
+				\end{align}
+				であるから, 求める確率は
+				\begin{align}
+					3\cdot\frac{1}{8} = \red{\frac{3}{8}}.
+				\end{align}
+			}
+			\item{
+				点 P が $(3, 3)$ から $(5, 4)$ を通ることを考える.
+				$x$, $y$ 座標の差をそれぞれ $\Delta x$, $\Delta y$ とすると, $\Delta x = 2$, $\Delta y = 1$ である.
+				$\Delta x = 2$ より, 点 P の $x$ 座標が 5 となるのは, $(3, 3)$ からさらに硬貨を 2 回投げたときである.
+				硬貨を 2 回投げて $\Delta y = 1$ となるのは, 表が 1 回, 裏が 1 回出る場合である.
+				この出方は $\permu{2}{2} = 2$ 通りであり, それぞれが起こる確率は
+				\begin{align}
+					\frac{1}{2}\cdot\frac{1}{2} = \frac{1}{4}
+				\end{align}
+				であるから, 点 P が $(3, 3)$ から $(5, 4)$ を通る確率は
+				\begin{align}
+					2\cdot\frac{1}{4} = \frac{1}{2}.
+				\end{align}
+				(1) より, 点 P が $(3, 3)$ を通る確率は $\dfrac{3}{8}$ だから, 求める確率は
+				\begin{align}
+					\frac{3}{8}\cdot\frac{1}{2} = \red{\frac{3}{16}}.
+				\end{align}
+			}
+		\end{enumerate}
+	}
+\end{qenumerate}
