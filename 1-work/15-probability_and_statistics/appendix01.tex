@@ -1,0 +1,38 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%	appendix01
+%===================================================================================================
+%	AUTHOR	H. NAKAJIMA
+%	DATE	2025/01
+%===================================================================================================
+%	EDIT HISTORY
+%	DATE		NAME			OVERVIEW
+%---------------------------------------------------------------------------------------------------
+%	2025/01		H. NAKAJIMA		Create new
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{問 60 (5) の解説}
+\label{問 60 (5) の解説}
+$S_{N}$ の総和を書き下すと
+\begin{align}
+	S_{N} = \frac{1}{9} + \frac{2}{9}\cdot\frac{8}{9} + \frac{3}{9}\cdot\left(\frac{8}{9}\right)^{2} + \cdots + \frac{N}{9}\cdot\left(\frac{8}{9}\right)^{N - 1}
+\end{align}
+となる.
+一方, 両辺 $\dfrac{8}{9}$ 倍すると
+\begin{align}
+	\frac{8}{9}S_{N} = \frac{1}{9}\cdot\frac{8}{9} + \frac{2}{9}\cdot\left(\frac{8}{9}\right)^{2} + \cdots + \frac{N - 1}{9}\cdot\left(\frac{8}{9}\right)^{N - 1} + \frac{N}{9}\cdot\left(\frac{8}{9}\right)^{N}
+\end{align}
+となる.
+辺々引くと
+\begin{align}
+	\def\arraystretch{2.5}
+	\begin{array}{rrcrcrcrcrcr}
+		        & S_{N}                              & {}={} & \dfrac{1}{9} & {}+{} & \dfrac{2}{9}\cdot\dfrac{8}{9} & {}+{} & \dfrac{3}{9}\cdot\left(\dfrac{8}{9}\right)^{2} & {}+ \cdots + {} & \dfrac{N}{9}\cdot\left(\dfrac{8}{9}\right)^{N - 1}     &       & \\
+		-\Bigm) & \dfrac{8}{9}S_{N}                  & {}={} &              & {}+{} & \dfrac{1}{9}\cdot\dfrac{8}{9} & {}+{} & \dfrac{2}{9}\cdot\left(\dfrac{8}{9}\right)^{2} & {}+ \cdots + {} & \dfrac{N - 1}{9}\cdot\left(\dfrac{8}{9}\right)^{N - 1} & {}+{} & \dfrac{N}{9}\cdot\left(\dfrac{8}{9}\right)^{N} \\ \hline
+		        & \left(1 - \dfrac{8}{9}\right)S_{N} & {}={} & \dfrac{1}{9} & {}+{} & \dfrac{1}{9}\cdot\dfrac{8}{9} & {}+{} & \dfrac{1}{9}\cdot\left(\dfrac{8}{9}\right)^{2} & {}+ \cdots + {} & \dfrac{1}{9}\cdot\left(\dfrac{8}{9}\right)^{N - 1}     & {}-{} & \dfrac{N}{9}\cdot\left(\dfrac{8}{9}\right)^{N}
+	\end{array}
+\end{align}
+より
+\begin{align}
+	\frac{S_{N}}{9} &= \frac{1}{9}\cdot\left[1 + \frac{8}{9} + \cdots + \left(\frac{8}{9}\right)^{N - 1}\right] - \frac{N}{9}\cdot\left(\frac{8}{9}\right)^{N}
+\end{align}
+となる.
