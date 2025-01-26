@@ -92,7 +92,7 @@
 		\begin{table}[H]
 			\centering
 			\begin{tabular}{c|c|c} \hline
-				階級 & 度数 & 累積度数 \\ \hline
+				階級 (kg) & 度数 & 累積度数 \\ \hline
 				40--45 &  2 &  2 \\
 				45--50 &  4 &  6 \\
 				50--55 & 12 & 18 \\
@@ -142,9 +142,164 @@
 		\begin{align}
 			v_{x} = \frac{4\cdot (146 - 159.36)^{2} + 2\cdot (174 - 159.36)^{2}}{100} = 37.1904
 		\end{align}
-		であるから, 分散 $s_{x}$ は
+		であるから, 標準偏差 $s_{x}$ は
 		\begin{align}
 			s_{x} = \sqrt{v_{x}} = \sqrt{37.1904} \simeq \red{6.098}.
+		\end{align}
+	}
+\end{qenumerate}
+
+%\vspace{\baselineskip}
+\check
+\begin{qenumerate}
+	\item{
+		\begin{enumerate}
+			\item{
+				累積度数分布表は以下のようになる.
+				\begin{table}[H]
+					\centering
+					\begin{tabular}{c|c|c} \hline
+						階級値 (cm) & 累積度数 & 累積相対度数 \\ \hline
+						157.5 &  1 & 0.025 \\
+						162.5 &  6 & 0.150 \\
+						167.5 & 17 & 0.425 \\
+						172.5 & 31 & 0.775 \\
+						177.5 & 38 & 0.950 \\
+						182.5 & 40 & 1.000 \\ \hline
+					\end{tabular}
+				\end{table}
+			}
+			\item{
+				ヒストグラムと度数折れ線は以下のようになる.
+				\begin{figure}[H]
+					\centering
+					\includegraphics[scale = 0.5]{./figure/81.pdf}
+				\end{figure}
+			}
+			\item{
+				身長の平均 $\overline{x}$ は
+				\begin{align}
+					\overline{x} = \frac{1\cdot 157.5 + \cdots + 2\cdot 182.5}{40} = \red{170.9}.
+				\end{align}
+			}
+		\end{enumerate}
+	}
+	\item{
+		\begin{enumerate}
+			\item{
+				変量 $u$ のデータは
+				\begin{align}
+					u: \red{5}, \quad \red{2}, \quad \red{5}, \quad \red{4}, \quad \red{6}, \quad \red{5}, \quad \red{3}, \quad \red{2}
+				\end{align}
+				であり, これらの平均 $\overline{u}$ は
+				\begin{align}
+					\overline{u} = \frac{5 + 2 + 5 + 4 + 6 + 5 + 3 + 2}{8} = \red{4}.
+				\end{align}
+			}
+			\item{
+				鉛筆の重さの平均 $\overline{x}$ は, $\overline{u} = \dfrac{\overline{x} - 7.4}{0.01}$ より
+				\begin{align}
+					\overline{x} &= 0.01\overline{u} + 7.4 = 0.01\cdot 4 + 7.4 = \red{7.44}.
+				\end{align}
+			}
+		\end{enumerate}
+	}
+	\item{
+		\begin{enumerate}
+			\item{
+				台風の発生件数の平均 $\overline{x}$ は
+				\begin{align}
+					\overline{x} = \frac{21 + \cdots + 23}{10} = \red{26.1}.
+				\end{align}
+				また, データを昇順に並べると
+				\begin{align}
+					21\quad 23\quad 23\quad 25\quad 26\quad 27\quad 27\quad 29\quad 29\quad 31
+				\end{align}
+				となるから, 中央値は
+				\begin{align}
+					\frac{26 + 27}{2} = \red{26.5}.
+				\end{align}
+			}
+			\item{
+				(1) で昇順に並べたデータより, 範囲は $31 - 21 = \red{10}$.
+				分散 $v_{x}$ は
+				\begin{align}
+					v_{x} = \frac{(21 - 26.1)^{2} + \cdot + (31 - 26.1)^{2}}{10} = \red{8.89}.
+				\end{align}
+				標準偏差 $s_{x}$ は
+				\begin{align}
+					s_{x} = \sqrt{v_{x}} = \sqrt{8.89} \simeq \red{2.982}.
+				\end{align}
+			}
+		\end{enumerate}
+	}
+	\item{
+		\begin{enumerate}
+			\item{
+				気温の平均 $\overline{x}$ は
+				\begin{align}
+					\overline{x} = \frac{5.3 + \cdots + 7.1}{12} \simeq \red{17.6}.
+				\end{align}
+				また, データを昇順に並べると
+				\begin{align}
+					&5.3\quad 7.1\quad 8.8\quad 10.6\quad 10.9\quad 16.3 \\
+					&20.3\quad 22.8\quad 24.6\quad 26.8\quad 28.5\quad 29.1
+				\end{align}
+				となるから, 中央値は
+				\begin{align}
+					\frac{16.3 + 20.3}{2} = \red{18.3}.
+				\end{align}
+			}
+			\item{
+				(1) で昇順に並べたデータより, 範囲は $29.1 - 5.3 = \red{23.8}$.
+				分散 $v_{x}$ は
+				\begin{align}
+					v_{x} = \frac{(5.3 - 17.6)^{2} + \cdot + (29.1 - 17.6)^{2}}{10} \simeq \red{71.13}.
+				\end{align}
+				標準偏差 $s_{x}$ は
+				\begin{align}
+					s_{x} = \sqrt{v_{x}} = \sqrt{71.13} \simeq \red{8.434}.
+				\end{align}
+			}
+		\end{enumerate}
+	}
+	\item{
+		\begin{enumerate}
+			\item{
+				度数が一番大きい階級は 170--175 だから, 最頻値は
+				\begin{align}
+					\frac{170 - 175}{2} = \red{172.5}.
+				\end{align}
+			}
+			\item{
+				データ数が 40 だから, 中央値は順に並んだデータの 20 番目のデータである.
+				{\textbf{81}} (1) の累積度数分布において, 累積度数が 20 になる階級は \red{170--175}.
+			}
+			\item{
+				{\textbf{81}} (3) より身長の平均は 170.9 だから, 身長の分散 $v_{x}$ は
+				\begin{align}
+					v_{x} &= \frac{1\cdot (157.5 - 170.9)^{2} + \cdots + 2\cdot (182.5 - 170.9)^{2}}{40} \\
+						&\simeq \red{31.73}.
+				\end{align}
+				分散 $s_{x}$ は
+				\begin{align}
+					s_{x} = \sqrt{v_{x}} = \sqrt{31.73} \simeq \red{5.633}.
+				\end{align}
+			}
+		\end{enumerate}
+	}
+	\item{
+		通学時間の平均 $\overline{x}$ は
+		\begin{align}
+			\overline{x} &= \frac{1\cdot 5 + \cdots + 5\cdot 75}{80} \simeq \red{49.1}.
+		\end{align}
+		通学時間の分散 $v_{x}$ は
+		\begin{align}
+			v_{x} &= \frac{1\cdot (5 - 49.1)^{2} + \cdot + 5\cdot (75 - 49.1)^{2}}{80} = 211.735
+		\end{align}
+		であるから, 標準偏差 $s_{x}$ は
+		\begin{align}
+			s_{x} = \sqrt{v_{x}} = \sqrt{211.735} = \red{14.891}.
 		\end{align}
 	}
 \end{qenumerate}
