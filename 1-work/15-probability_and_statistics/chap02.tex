@@ -318,8 +318,85 @@
 				である.
 			}
 			\item{
-				
+				Sturges の公式より
+				\begin{align}
+					1 + \frac{\log{18}}{\log{2}} \simeq 5.17
+				\end{align}
+				となるから, 階級の数は 5 とする.
+				また, 階級の幅はデータの範囲を階級の数で割って
+				\begin{align}
+					\frac{18 - 0}{5} = 3.6
+				\end{align}
+				となるから, 階級の幅は 4 とする.
+				以上の条件から作られる度数分布表は以下のようになる.
+				\begin{table}[H]
+					\centering
+					\begin{tabular}{c|c|c} \hline
+						階級 & 階級値 & 度数 \\ \hline
+						0 以上 4 未満   & 2 & 6 \\
+						4 以上 8 未満   &  6 & 3 \\
+						8 以上 12 未満  & 10 & 5 \\
+						12 以上 16 未満 & 14 & 1 \\
+						16 以上 20 未満 & 18 & 3 \\ \hline
+						               & 計 & 18 \\ \hline
+					\end{tabular}
+				\end{table}
+			}
+			\item{
+				ヒストグラムは以下のようになる.
+				\begin{figure}[H]
+					\centering
+					\includegraphics[scale = 0.5]{./figure/87.pdf}
+				\end{figure}
 			}
 		\end{enumerate}
+	}
+	\item{
+		5 歳の身長のデータを $x$, 17 歳の身長のデータを $y$ とすると, これらの平均 $\overline{x}$, $\overline{y}$ は
+		\begin{gather}
+			\overline{x} = \frac{115.5 + \cdots + 111.0}{10} = 110.19, \\
+			\overline{y} = \frac{176.1 + \cdots + 170.6}{10} = 171.7
+		\end{gather}
+		である.
+		また, これらの標準偏差 $s_{x}$, $s_{y}$ は
+		\begin{align}
+			s_{x} &= \sqrt{\frac{(115.5 - 110.19)^{2} + \cdots + (111.0 - 110.19)^{2}}{10}} \\
+				&= \sqrt{12.6929} \simeq 3.563, \\
+			s_{y} &= \sqrt{\frac{(176.1 - 171.7)^{2} + \cdots + (170.6 - 171.7)^{2}}{10}} \\
+				&= \sqrt{17.2} \simeq 4.147
+		\end{align}
+		である.
+		したがって, 5 歳の身長のデータの変動係数は
+		\begin{align}
+			\frac{s_{x}}{\overline{x}} = \frac{3.563}{110.19} \simeq \red{0.032}, 
+		\end{align}
+		17 歳の身長データの変動係数は
+		\begin{align}
+			\frac{s_{y}}{\overline{y}} = \frac{4.147}{171.7} \simeq \red{0.024}.
+		\end{align}
+	}
+	\item{
+		数学の得点のデータを $x$, 英語の得点のデータを $y$ とすると, これらの平均 $\overline{x}$, $\overline{y}$ は
+		\begin{gather}
+			\overline{x} = \frac{0\cdot 5 + \cdots + 0\cdot 95}{50} = 51.4, \\
+			\overline{y} = \frac{0\cdot 5 + \cdots + 5\cdot 95}{50} = 64.6
+		\end{gather}
+		である.
+		また, これらの標準偏差 $s_{x}$, $s_{y}$ は
+		\begin{align}
+			s_{x} &= \sqrt{\frac{0\cdot (5 - 51.4)^{2} + \cdots + 0\cdot (95 - 51.4)^{2}}{50}} \\
+				&= \sqrt{255.04} \simeq 15.97, \\
+			s_{y} &= \sqrt{\frac{0\cdot (5 - 64.6)^{2} + \cdots + 5\cdot (95 - 64.6)^{2}}{50}} \\
+				&= \sqrt{283.84} \simeq 16.85
+		\end{align}
+		である.
+		したがって, 数学の得点のデータの変動係数は
+		\begin{align}
+			\frac{s_{x}}{\overline{x}} = \frac{15.97}{51.4} \simeq \red{0.311}, 
+		\end{align}
+		英語の得点のデータの変動係数は
+		\begin{align}
+			\frac{s_{y}}{\overline{y}} = \frac{16.85}{64.6} \simeq \red{0.261}.
+		\end{align}
 	}
 \end{qenumerate}
