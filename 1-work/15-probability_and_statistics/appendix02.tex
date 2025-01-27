@@ -12,3 +12,51 @@
 
 \section{$a_{n + 1} = pa_{n} + q$ 型漸化式の一般項}
 \label{a_{n + 1} = pa_{n} + q 型漸化式の一般項}
+
+漸化式
+\begin{align}
+	a_{n + 1} = pa_{n} + q \label{B.特性解型}
+\end{align}
+で表される数列 $\{a_{n}\}$ の一般項を求めることを考える.
+ただし, 初項は $a_{1}$ とする.
+
+\vspace{\baselineskip}
+漸化式を
+\begin{align}
+	a_{n + 1} - \alpha = p(a_{n} - \alpha) \label{B.等比型}
+\end{align}
+と変形できるとき, これは $b_{n} = a_{n} - \alpha$ とおけば
+\begin{align}
+	b_{n + 1} = pb_{n} \label{B.等比型2}
+\end{align}
+となり, 容易に一般項を求めることができる.
+$\alpha$ を定めるため, 式~\eqref{B.特性解型} から 式~\eqref{B.等比型} を辺々引けば
+\begin{align}
+	\begin{array}{cccccccccc}
+		        & a_{n + 1} &       &        & {}={} & pa_{n} &       &         & {}+{} & q\\
+		-\Bigm) & a_{n + 1} & {}-{} & \alpha & {}={} & pa_{n} & {}-{} & p\alpha &       &  \\ \hline
+		        &           &       & \alpha & {}={} &        &       & p\alpha & {}+{} & q
+	\end{array}
+\end{align}
+を得る.
+この方程式を {\textbf{特性方程式}} という.
+特性方程式を解くと
+\begin{align}
+	\alpha = \frac{q}{1-p}
+\end{align}
+となり, 式~\eqref{B.等比型} に代入すると
+\begin{align}
+	a_{n + 1} - \frac{q}{1 - p} = p\left(a_{n} - \frac{q}{1 - p}\right)
+\end{align}
+となる.
+$b_{n} = a_{n} - \dfrac{q}{1 - p}$ とおくと 式~\eqref{B.等比型2} より一般解は
+\begin{align}
+	b_{n} = b_{1}p^{n - 1}
+\end{align}
+となるから, 求める一般解は
+\begin{align}
+	a_{n} + \frac{q}{1 - p} = \left(a_{1} - \frac{q}{1 - p}\right)p^{n - 1}
+	\quad\Leftrightarrow\quad
+	a_{n} = \left(a_{1} - \frac{q}{1 - p}\right)p^{n - 1} - \frac{q}{1 - p}
+\end{align}
+となる.
