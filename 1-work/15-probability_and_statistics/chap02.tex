@@ -400,3 +400,201 @@
 		\end{align}
 	}
 \end{qenumerate}
+
+%\vspace{\baselineskip}
+{\textbf{\S 2.2 \indent 2 次元のデータ}}
+\basic
+\begin{qenumerate}
+	\item{
+		数学の得点の平均 $\overline{x}$, 英語の得点の平均 $\overline{y}$ は
+		\begin{align}
+			\overline{x} &= \frac{8 + 4 + 6 + 5 + 7 + 8 + 4 + 2}{8} = 5.5, \\
+			\overline{y} &= \frac{5 + 6 + 4 + 6 + 4 + 3 + 7 + 9}{8} = 5.5
+		\end{align}
+		である.
+		また, 標準偏差 $s_{x}$, $s_{y}$ は
+		\begin{align}
+			s_{x} &= \sqrt{\frac{(8 - 5.5)^{2} + \cdots + (2 - 5.5)^{2}}{8}} \\
+				&= \sqrt{4} = 2, \\
+			s_{y} &= \sqrt{\frac{(5 - 5.5)^{2} + \cdots + (9 - 5.5)^{2}}{8}} \\
+				&= \sqrt{3.25}
+		\end{align}
+		である.
+		さらに, $x$ と $y$ の共分散 $s_{xy}$ は
+		\begin{align}
+			s_{xy} &= \frac{(8 - 5.5)(5 - 5.5) + \cdots + (2 - 5.5)(9 - 5.5)}{8} \\
+				&= \frac{(-1.25) + \cdots + (-12.25)}{8} = -3.25
+		\end{align}
+		である.
+		以上より, 相関係数 $r$ は
+		\begin{align}
+			r &= \frac{s_{xy}}{s_{x}s_{y}} = -\frac{3.25}{2\cdot \sqrt{3.25}} \simeq \red{-0.901}
+		\end{align}
+		散布図は以下のようになる.
+		\begin{figure}[H]
+			\centering
+			\includegraphics[scale = 0.5]{./figure/90.pdf}
+		\end{figure}
+	}
+	\item{
+		年齢の平均 $\overline{x}$, 血圧の平均 $\overline{y}$ は
+		\begin{align}
+			\overline{x} &= \frac{36 + \cdots + 73}{10} = 54.8, \\
+			\overline{y} &= \frac{117 + \cdots + 158}{10} = 138.2
+		\end{align}
+		である.
+		また, 標準偏差 $s_{x}$, $s_{y}$ は
+		\begin{align}
+			s_{x} &= \sqrt{\frac{(36 - 54.8)^{2} + \cdots + (73 - 54.8)^{2}}{10}} \\
+				&= \sqrt{175.56}, \\
+			s_{y} &= \sqrt{\frac{(117 - 138.2)^{2} + \cdots + (158 - 138.2)^{2}}{10}} \\
+				&= \sqrt{140.56}
+		\end{align}
+		である.
+		さらに, $x$ と $y$ の共分散 $s_{xy}$ は
+		\begin{align}
+			s_{xy} &= \frac{1}{10}\cdot[(36 - 54.8)(117 - 138.2) + \cdots \\
+				&\quad\quad\quad\quad\quad\quad\quad + (73 - 54.8)(158 - 138.2)] \\
+				&= \frac{398.56 + \cdots + 360.36}{10} = 150.04
+		\end{align}
+		である.
+		以上より, 相関係数 $r$ は
+		\begin{align}
+			r &= \frac{s_{xy}}{s_{x}s_{y}} = -\frac{150.04}{\sqrt{175.56}\cdot \sqrt{140.56}} \simeq \red{0.955}
+		\end{align}
+		散布図は以下のようになる.
+		\begin{figure}[H]
+			\centering
+			\includegraphics[scale = 0.5]{./figure/91.pdf}
+		\end{figure}
+	}
+	\item{
+		\begin{enumerate}
+			\item{
+				気温の平均 $\overline{x}$, アイスの売上個数の平均 $\overline{y}$ は
+				\begin{align}
+					\overline{x} &= \frac{0 + 5 + 10 + 15 + 20 + 25 + 30}{7} = 15, \\
+					\overline{y} &= \frac{2 + 4 + 7 + 15 + 23 + 28 + 33}{7} = 16
+				\end{align}
+				である.
+				また, 気温の標準偏差 $s_{x}$ は
+				\begin{align}
+					s_{x} &= \sqrt{\frac{(0 - 15)^{2} + \cdots + (30 - 15)^{2}}{7}} = 10
+				\end{align}
+				である.
+				さらに, 気温とアイスの売り上げ個数の共分散 $s_{xy}$ は
+				\begin{align}
+					s_{xy} &= \frac{(0 - 15)(2 - 16) + \cdots + (30 - 15)(33 - 16)}{7} \\
+						&= \frac{785}{7}
+				\end{align}
+				である.
+				$y$ の $x$ への回帰直線の方程式を
+				\begin{align}
+					y=ax + b\quad (a, b\in\mathbb{R})
+				\end{align}
+				とおき, $s_{x}$, $s_{xy}$ から $a$, $b$ を定めると
+				\begin{gather}
+					a = \frac{s_{xy}}{{s_{x}}^{2}}, \\
+					b = \overline{y} - a\overline{x}
+				\end{gather}
+				より
+				\begin{gather}
+					a = \frac{785}{7}\cdot \frac{1}{10^{2}} = \frac{157}{140} \simeq 1.12, \\
+					b = 16 - \frac{157}{140}\cdot 15 \simeq -0.82.
+				\end{gather}
+				すなわち, 求める方程式は
+				\begin{align}
+					\red{y = 1.12x - 0.82}.
+				\end{align}
+			}
+			\item{
+				(1) で求めた方程式に $x = 35$ を代入すると
+				\begin{align}
+					y = 1.12\cdot 35 - 0.82 = 38.38 \simeq 38
+				\end{align}
+				より, \red{38 個}.
+			}
+		\end{enumerate}
+	}
+	\item{
+		$x$, $y$ の平均 $\overline{x}$, $\overline{y}$ は
+		\begin{align}
+			\overline{x} &= \frac{0.8 + 2.7 + 6.1 + 4.6 + 7.3 + 1.5 + 2.3 + 3.2}{8} \\
+				&= 3.5625, \\
+			\overline{y} &= \frac{11.1 \! + \! 13.1 \! + \! 18.0 \! + \! 17.0 \! + \! 19.3 \! + \! 12.0 \! + \! 14.1 \! + \! 14.8}{8} \\
+				&= 14.925
+		\end{align}
+		である.
+		また, $x$ の標準偏差 $s_{x}$ は
+		\begin{align}
+			s_{x} &= \sqrt{\frac{(0.8 - 3.625)^{2} + \cdots + (3.2 - 3.5625)^{2}}{8}} \\
+				&\simeq 2.117
+		\end{align}
+		である.
+		さらに, $x$, $y$ の共分散 $s_{xy}$ は
+		\begin{align}
+			s_{xy} &= \frac{1}{8}\cdot [(0.8 - 3.5625)(11.1 - 14.925) + \cdots \\
+				&\quad\quad\quad\quad\quad\quad\quad + (3.2 - 3.5625)(14.8 - 14.925)] \\
+				&\simeq 5.696
+		\end{align}
+		である.
+		$y$ の $x$ への回帰直線の方程式を
+		\begin{align}
+			y=ax + b\quad (a, b\in\mathbb{R})
+		\end{align}
+		とおき, $s_{x}$, $s_{xy}$ から $a$, $b$ を定めると
+		\begin{gather}
+			a = \frac{s_{xy}}{{s_{x}}^{2}} = \frac{5.696}{\sqrt{2.117}^{2}} \simeq 1.27, \\
+			b = \overline{y} - a\overline{x} = 14.925 - 1.271\cdot 3.5625 \simeq 10.40.
+		\end{gather}
+		すなわち, 求める方程式は
+		\begin{align}
+			\red{y = 1.27x + 10.40}.
+		\end{align}
+	}
+	\item{
+		\begin{enumerate}
+			\item{
+				身長の平均 $\overline{x}$, 運動靴のサイズの平均 $\overline{y}$ は
+				\begin{gather}
+					\overline{x} = \frac{164 + \cdots + 166}{10} = 172.3, \\
+					\overline{y} = \frac{24.5 + \cdots + 27.0}{10} = 27.1
+				\end{gather}
+				である.
+				また, 身長の標準偏差 $s_{x}$ は
+				\begin{align}
+					s_{x} &= \sqrt{\frac{(164 - 172.3)^{2} + \cdots + (166 - 172.3)^{2}}{10}} \\
+						&= \sqrt{31.61}
+				\end{align}
+				である.
+				さらに, 身長と運動靴のサイズの共分散 $s_{xy}$ は
+				\begin{align}
+					s_{xy} &= \frac{1}{10}\cdot[(164 - 172.3)(24.5 - 27.1) + \cdots \\
+						&\quad\quad\quad\quad\quad\quad\quad (166 - 172.3)(27.0 - 27.1)] \\
+						&= 9.27
+				\end{align}
+				である.
+				$y$ の $X$ への回帰直線の方程式を
+				\begin{align}
+					y = ax + b\quad (a, b\in\mathbb{R})
+				\end{align}
+				とおき, $s_{x}$, $s_{xy}$ から $a$, $b$ を定めると
+				\begin{gather}
+					a = \frac{s_{xy}}{{s_{x}}^{2}} = \frac{9.27}{\sqrt{31.61}^{2}} \simeq 0.29 \\
+					b = \overline{y} - a\overline{x} = 27.1 - \frac{9.27}{31.61}\cdot 172.3 = -23.43.
+				\end{gather}
+				すなわち, 求める方程式は
+				\begin{align}
+					\red{y = 0.29x - 23.43}.
+				\end{align}
+			}
+			\item{
+				(1) で求めた方程式に $x = 180$ を代入すると
+				\begin{align}
+					y = 0.29\cdot 180 - 23.43 = 28.77 \simeq 29
+				\end{align}
+				より, \red{29.0 cm}.
+			}
+		\end{enumerate}
+	}
+\end{qenumerate}
