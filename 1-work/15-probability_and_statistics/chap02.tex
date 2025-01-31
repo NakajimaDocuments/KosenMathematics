@@ -598,3 +598,196 @@
 		\end{enumerate}
 	}
 \end{qenumerate}
+
+%\vspace{\baselineskip}
+\check
+\begin{qenumerate}
+	\item{
+		表の空欄を埋めると以下のようになる.
+		\begin{table}[H]
+			\centering
+			\begin{tabular}{r|c|c|c|c|c|} \cline{2-6}
+				& $x_{i}$ & $y_{i}$ & $x_{i}^{2}$ & $y_{i}^{2}$ & $x_{i}y_{i}$ \\ \cline{2-6}
+				&  1 &  4 & \red{  1} & \red{ 16} & \red{ 4} \\
+				& 10 &  9 & \red{100} & \red{ 81} & \red{90} \\
+				&  7 &  7 & \red{ 49} & \red{ 49} & \red{49} \\
+				&  6 &  8 & \red{ 36} & \red{ 64} & \red{48} \\
+				&  8 &  9 & \red{ 64} & \red{ 81} & \red{72} \\
+				&  9 &  8 & \red{ 81} & \red{ 64} & \red{72} \\
+				&  2 &  5 & \red{  4} & \red{ 25} & \red{10} \\
+				&  3 &  7 & \red{  9} & \red{ 49} & \red{21} \\
+				&  8 & 10 & \red{ 64} & \red{100} & \red{80} \\
+				&  7 &  6 & \red{ 49} & \red{ 36} & \red{42} \\ \cline{2-6}
+				合計 & \red{61} & \red{73} & \red{457} & \red{565} & \red{488} \\ \cline{2-6}
+			\end{tabular}
+		\end{table}
+		\begin{enumerate}
+			\item{
+				表より, 平均 $\overline{x}$, $\overline{y}$ は
+				\begin{gather}
+					\overline{x} = \frac{61}{10} = \red{6.1}, \\
+					\overline{y} = \frac{73}{10} = \red{7.3}.
+				\end{gather}
+			}
+			\item{
+				表より, 平均 $\overline{x^{2}}$, $\overline{y^{2}}$ および $\overline{xy}$ は
+				\begin{gather}
+					\overline{x^{2}} = \frac{457}{10} = \red{45.7}, \\
+					\overline{y^{2}} = \frac{565}{10} = \red{56.5}, \\
+					\overline{xy} = \frac{488}{10} = \red{48.8}.
+				\end{gather}
+			}
+			\item{
+				表, (1) より, 標準偏差 $s_{x}$, $s_{y}$ は
+				\begin{align}
+					s_{x} &= \sqrt{\frac{1}{10}\sum_{i = 1}^{10}{\left(x_{i} - \overline{x}\right)^{2}}}
+						 = \sqrt{\frac{1}{10}\sum_{i = 1}^{10}{\left(x_{i}^{2} -2\overline{x}x_{i} + \overline{x}^{2}\right)}} \\
+						&= \sqrt{\frac{1}{10}\cdot\left(\sum_{i = 1}^{10}{x_{i}^{2}} - 2\overline{x}\sum_{i = 1}^{10}{x_{i}} + 10\overline{x}^{2}\right)} \\
+						&= \sqrt{\frac{1}{10}\cdot\left(457 - 2\cdot 6.1\cdot 61 + 10\cdot 6.1^{2}\right)} \\
+						&\simeq \red{2.914}, \\
+					s_{y} &= \sqrt{\frac{1}{10}\sum_{i = 1}^{10}{\left(y_{i} - \overline{y}\right)^{2}}}
+						 = \sqrt{\frac{1}{10}\sum_{i = 1}^{10}{\left(y_{i}^{2} -2\overline{y}y_{i} + \overline{y}^{2}\right)}} \\
+						&= \sqrt{\frac{1}{10}\cdot\left(\sum_{i = 1}^{10}{y_{i}^{2}} - 2\overline{y}\sum_{i = 1}^{10}{y_{i}} + 10\overline{y}^{2}\right)} \\
+						&= \sqrt{\frac{1}{10}\cdot\left(565 - 2\cdot 7.3\cdot 73 + 10\cdot 7.3^{2}\right)} \\
+						&\simeq \red{1.792}.
+				\end{align}
+			}
+			\item{
+				(1), (2) より, $x$ と $y$ の共分散 $s_{xy}$ は
+				\begin{align}
+					s_{xy} = \overline{xy} - \overline{x}\cdot\overline{y} = 48.8 - 6.1\cdot 7.3 = \red{4.27}.
+				\end{align}
+			}
+			\item{
+				(3), (4) より, $x$ と $y$ の相関係数 $r$ は
+				\begin{align}
+					r = \frac{s_{xy}}{s_{x}s_{y}} = \frac{4.27}{2.914\cdot1.792} \simeq \red{0.818}.
+				\end{align}
+			}
+		\end{enumerate}
+	}
+	\item{
+		\begin{enumerate}
+			\item{
+				数学の得点の平均 $\overline{x}$ は
+				\begin{align}
+					\overline{x} = \frac{50 + 50 + 50 + 50 + 60}{5} = \red{52}.
+				\end{align}
+			}
+			\item{
+				電磁気学の得点の平均 $\overline{y}$ は
+				\begin{align}
+					\overline{y} = \frac{90 + 60 + 70 + 75 + 80}{5} = 75.
+				\end{align}
+				さらに, 数学と電磁気学の得点の積の平均 $\overline{xy}$ は
+				\begin{align}
+					\overline{xy} = \frac{50\cdot 90 + \cdots + 60\cdot 80}{5} = 3910.
+				\end{align}
+				これより, 数学と電磁気学の得点の共分散 $s_{xy}$ は
+				\begin{align}
+					s_{xy} = \overline{xy} - \overline{x}\cdot \overline{y} = 3910 - 52\cdot 75 = 10.
+				\end{align}
+				また, 数学と電磁気学の得点の標準偏差 $s_{x}$, $s_{y}$ は
+				\begin{gather}
+					s_{x} = \sqrt{\frac{(50 - 52)^{2} + \cdots + (60 - 52)^{2}}{5}} = 4, \\
+					s_{y} = \sqrt{\frac{(90 - 75)^{2} + \cdots + (80 - 75)^{2}}{5}} = 10.
+				\end{gather}
+				以上より, 相関係数 $r$ は
+				\begin{align}
+					r = \frac{s_{xy}}{s_{x}s_{y}} = \frac{10}{4\cdot 10} = \red{0.25}.
+				\end{align}
+			}
+		\end{enumerate}
+	}
+	\item{
+		数学の得点を $x$, 英語の得点を $y$ とする.
+		$\overline{x}$, $\overline{y}$ および $\overline{xy}$ はそれぞれ
+		\begin{align}
+			\overline{x} &= \frac{58 + \cdots + 45}{10} = 54.1, \\
+			\overline{y} &= \frac{60 + \cdots + 60}{10} = 60, \\
+			\overline{xy} &= \frac{58\cdot 60 + \cdots 45\cdot 60}{10} = 3473.
+		\end{align}
+		これより, $x$ と $y$ の共分散 $s_{xy}$ は
+		\begin{align}
+			s_{xy} = \overline{xy} - \overline{x}\cdot \overline{y} = 3473 - 54.1\cdot 60 = 227.
+		\end{align}
+		また, 標準偏差 $s_{x}$, $s_{y}$ は
+		\begin{align}
+			s_{x} &= \sqrt{\frac{(58 - 54.1)^{2} + \cdot + (45 - 54.1)^{2}}{10}} \simeq 19.24 , \\
+			s_{y} &= \sqrt{\frac{(60 - 60)^{2} + \cdots + (60 - 60)^{2}}{10}} \simeq 14.72.
+		\end{align}
+		以上より, 相関係数 $r$ は
+		\begin{align}
+			r = \frac{s_{xy}}{s_{x}s_{y}} = \frac{227}{19.24\cdot 14.72} \simeq 0.802.
+		\end{align}
+		すなわち, \red{強い正の相関がある}.
+	}
+	\item{
+		\begin{enumerate}
+		\item{
+			求める方程式を
+			\begin{align}
+				y = ax + b\quad (a, b\in \mathbb{R})
+			\end{align}
+			とおく.
+			{\textbf{95}} (1), (3), (4) より
+			\begin{align}
+				a &= \frac{s_{xy}}{{s_{x}}^{2}} = \frac{4.27}{8.49} \simeq 0.503, \\
+				b &= \overline{y} - a\overline{x} = 7.3 - 0.503\cdot 6.1 = 4.232.
+			\end{align}
+			すなわち, $y$ の $x$ への回帰直線の方程式は
+			\begin{align}
+				\red{y = 0.503x + 4.232}.
+			\end{align}
+		}
+		\item{
+			散布図と回帰直線は以下のようになる.
+			\begin{figure}[H]
+				\centering
+				\includegraphics[scale = 0.5]{./figure/98.pdf}
+			\end{figure}
+		}
+		\end{enumerate}
+	}
+	\item{
+		\begin{enumerate}
+			\item{
+				平均 $\overline{x}$, $\overline{y}$ および $\overline{xy}$ はそれぞれ
+				\begin{align}
+					\overline{x} &= \frac{55.2 + \cdots + 89.7}{5} = 76.86, \\
+					\overline{y} &= \frac{7.4 + \cdot + 0.3}{5} = 2.74, \\
+					\overline{xy} &= \frac{55.2\cdot 7.4 + \cdot + 89.7\cdot 0.3}{5} = 180.45.
+				\end{align}
+				これより, $x$ と $y$ の共分散 $s_{xy}$ は
+				\begin{align}
+					s_{xy} = \overline{xy} - \overline{x}\cdot \overline{y} = 180.45 - 76.86\cdot 2.74 \simeq -30.15.
+				\end{align}
+				また, $x$ の分散 (標準偏差の 2 乗) ${s_{x}}^{2}$ は
+				\begin{align}
+					{s_{x}}^{2} &= \frac{(55.2 - 76.86)^{2} + \cdots + (7.4 - 2.74)^{2}}{5} \\
+						&\simeq 147.17.
+				\end{align}
+				求める方程式を
+				\begin{align}
+					y = ax + b\quad (a, b\in \mathbb{R})
+				\end{align}
+				とおくと, 以上より
+				\begin{align}
+					a &= \frac{s_{xy}}{{s_{x}}^{2}} = -\frac{30.15}{147.17} \simeq -0.205, \\
+					b &= \overline{y} - a\overline{x} = 2.74 - (-0.205)\cdot 76.86 \simeq 18.496.
+				\end{align}
+				すなわち, 求める方程式は
+				\begin{align}
+					\red{y = -0.205x + 18.496}.
+				\end{align}
+			}
+			\item{
+				(1) で求めた方程式に $x = 85$ を代入して
+				\begin{align}
+					y = -0.205\cdot 85 + 18.496 \simeq 1.1
+				\end{align}
+				より, \red{1.1\%}.
+			}
+		\end{enumerate}
+	}
+\end{qenumerate}
