@@ -146,10 +146,11 @@
 		\begin{align}
 			s_{x} = \sqrt{v_{x}} = \sqrt{37.1904} \simeq \red{6.098}.
 		\end{align}
+		である.
 	}
 \end{qenumerate}
 
-%\vspace{\baselineskip}
+\vspace{\baselineskip}
 \check
 \begin{qenumerate}
 	\item{
@@ -299,12 +300,13 @@
 		\end{align}
 		であるから, 標準偏差 $s_{x}$ は
 		\begin{align}
-			s_{x} = \sqrt{v_{x}} = \sqrt{211.735} = \red{14.891}.
+			s_{x} = \sqrt{v_{x}} = \sqrt{211.735} = \red{14.891}
 		\end{align}
+		である.
 	}
 \end{qenumerate}
 
-%\vspace{\baselineskip}
+\vspace{\baselineskip}
 \stepup
 \begin{qenumerate}
 	\item{
@@ -398,10 +400,11 @@
 		\begin{align}
 			\frac{s_{y}}{\overline{y}} = \frac{16.85}{64.6} \simeq \red{0.261}.
 		\end{align}
+		である.
 	}
 \end{qenumerate}
 
-%\vspace{\baselineskip}
+\vspace{\baselineskip}
 {\textbf{\S 2.2 \indent 2 次元のデータ}}
 \basic
 \begin{qenumerate}
@@ -599,7 +602,7 @@
 	}
 \end{qenumerate}
 
-%\vspace{\baselineskip}
+\vspace{\baselineskip}
 \check
 \begin{qenumerate}
 	\item{
@@ -789,5 +792,136 @@
 				より, \red{1.1\%}.
 			}
 		\end{enumerate}
+	}
+\end{qenumerate}
+
+\vspace{\baselineskip}
+\stepup
+\begin{qenumerate}
+	\item{
+		変量 $u$, $v$ および $uv$ の値は以下の表のようになる.
+		\begin{table}[H]
+			\centering
+			\begin{tabular}{r|r|r} \hline
+				\multicolumn{1}{c|}{$u$} & \multicolumn{1}{c|}{$v$} & \multicolumn{1}{c}{$uv$} \\ \hline
+				$ 1.2$ & $ -3.4$ & $-4.08$ \\
+				$ 0.4$ & $ -1.0$ & $-0.40$ \\
+				$-0.6$ & $  7.4$ & $-4.44$ \\
+				$-3.6$ & $ -5.5$ & $19.80$ \\
+				$ 0.4$ & $ -0.5$ & $-0.20$ \\
+				$-4.8$ & $-10.9$ & $52.32$ \\
+				$ 0.7$ & $  0.2$ & $ 0.14$ \\
+				$ 4.8$ & $  6.4$ & $30.72$ \\
+				$ 0.3$ & $ -1.2$ & $-0.36$ \\
+				$ 3.0$ & $  5.5$ & $16.50$ \\ \hline
+			\end{tabular}
+		\end{table}
+		表より, 平均 $\overline{u}$, $\overline{v}$ および $\overline{uv}$ は
+		\begin{align}
+			\overline{u} &= \frac{1.2 + \cdots + 3.0}{10} = 0.18, \\
+			\overline{v} &= \frac{-3.4 + \cdots + 5.5}{10} = -0.3, \\
+			\overline{uv} &= \frac{-4.08 + \cdots + 16.50}{10} = 11.
+		\end{align}
+		これより, $u$ と $v$ の共分散 $s_{uv}$ は
+		\begin{align}
+			s_{uv} = \overline{uv} - \overline{u}\cdot \overline{v} = 11 - 0.18\cdot (-0.3) = 11.054.
+		\end{align}
+		また, 標準偏差 $s_{u}$, $s_{v}$ は
+		\begin{align}
+			s_{u} &= \sqrt{\frac{(1.2 - 0.18)^{2} + \cdots + (3.0 - 0.18)^{2}}{10}} \\
+				&\simeq 2.654, \\
+			s_{v} &= \sqrt{\frac{(-3.4 - (-0.3))^{2} + \cdots + (5.5 - (-0.3))^{2}}{10}} \\
+				&\simeq 5.370.
+		\end{align}
+		以上より, 相関係数 $r_{xy}$ は $r_{xy} = r_{uv}$ より
+		\begin{align}
+			r_{xy} = r_{uv} = \frac{s_{uv}}{s_{u}s_{v}} = \frac{11.054}{2.654\cdot 5.370} = \red{0.7756}.
+		\end{align}
+	}
+	\item{
+		平均 $\overline{x}$, $\overline{y}$ は
+		\begin{align}
+			\overline{x} &= \frac{50 + \cdots + 75}{8} = 71.625, \\
+			\overline{y} &= \frac{390 + \cdots + 330}{8} = 381.
+		\end{align}
+		また, $\overline{x^{2}}$, $\overline{y^{2}}$ および $\overline{xy}$ は
+		\begin{align}
+			\overline{x^{2}} &= \frac{50^{2} + \cdots + 75^{2}}{8} = 5394.375, \\
+			\overline{y^{2}} &= \frac{390^{2} + \cdots + 330^{2}}{8} = 148088, \\
+			\overline{xy} &= \frac{50\cdot 390 + \cdots + 65\cdot 410}{8} = 26560.5.
+		\end{align}
+		これより, 分散 ${s_{x}}^{2}$, ${s_{y}}^{2}$ および共分散 $s_{xy}$ は
+		\begin{align}
+			{s_{x}}^{2} &= \overline{x^{2}} - {\overline{x}}^{2} = 5394.735 - 71.625^{2} \simeq 264.23, \\
+			{s_{y}}^{2} &= \overline{y^{2}} - {\overline{y}}^{2} = 148088 - 381^{2} = 2927, \\
+			s_{xy} &= \overline{xy} - \overline{x}\cdot \overline{y} = 26560.5 - 71.625\cdot 381 = -728.625.
+		\end{align}
+		以上より, $x$ の $y$ への回帰直線の方程式, $y$ の $x$ への回帰直線の方程式をそれぞれ
+		\begin{align}
+			x &= ay + b\quad (a, b\in\mathbb{R}), \\
+			y &= cx + d\quad (c, d\in\mathbb{R})
+		\end{align}
+		とおくと
+		\begin{align}
+			a &= \frac{s_{xy}}{{s_{y}}^{2}} = -\frac{728.625}{2927} \simeq -0.249, \\
+			b &= \overline{x} - a\overline{y} = 71.625 - (-0.249)\cdot 381 = 166.494, \\
+			c &= \frac{s_{xy}}{{s_{x}}^{2}} = -\frac{728.625}{264.23} \simeq -2.758, \\
+			d &= \overline{y} - c\overline{x} = 381 - (-2.758)\cdot 71.625 \simeq 578.542
+		\end{align}
+		より, $x$ の $y$ への回帰直線の方程式は
+		\begin{align}
+			\red{x = -0.249y + 166.494}, 
+		\end{align}
+		$y$ の $x$ への回帰直線の方程式は
+		\begin{align}
+			\red{y = -2.758x + 578.542}.
+		\end{align}
+	}
+	\item{
+		$x$, $y$ についての散布図, $z$, $w$ についての散布図はそれぞれ以下のようになる.
+		\begin{figure}[H]
+			\centering
+			\begin{minipage}{0.49\columnwidth}
+				\centering
+				\includegraphics[scale = 0.5]{./figure/102-1.pdf} \\
+				$x$-$y$ の散布図
+			\end{minipage}
+			\begin{minipage}{0.49\columnwidth}
+				\centering
+				\includegraphics[scale = 0.5]{./figure/102-2.pdf} \\
+				$z$-$w$ の散布図
+			\end{minipage}
+		\end{figure}
+		変量 $z$, $w$ , $z^{2}$, $w^{2}$ および $zw$ の値は以下の表のようになる
+		\begin{table}[H]
+			\centering
+			\begin{tabular}{r|r|r|r|r} \hline
+				\multicolumn{1}{c|}{$z$} & \multicolumn{1}{c|}{$w$} & \multicolumn{1}{c|}{$z^{2}$} & \multicolumn{1}{c|}{$w^{2}$} & \multicolumn{1}{c}{$zw$} \\ \hline
+				$-0.1549$ & $-0.5229$ & $0.0240$ & $0.2734$ & $0.0810$ \\
+				$-0.0969$ & $-0.3010$ & $0.0094$ & $0.0906$ & $0.0292$ \\
+				$ 0.2041$ & $ 0.6232$ & $0.0417$ & $0.3884$ & $0.1272$ \\
+				$ 0.3222$ & $ 0.9590$ & $0.1038$ & $0.9198$ & $0.3090$ \\
+				$ 0.3617$ & $ 1.0934$ & $0.1308$ & $1.1956$ & $0.3955$ \\
+				$ 0.3802$ & $ 1.1367$ & $0.1446$ & $1.2921$ & $0.4322$ \\ \hline
+			\end{tabular}
+		\end{table}
+		表より, 平均 $\overline{z}$, $\overline{w}$, $\overline{z^{2}}$, $\overline{w^{2}}$ および $\overline{zw}$ は
+		\begin{align}
+			\overline{z} &= \frac{-0.1549 + \cdots + 0.3802}{6} \simeq 0.1694\\
+			\overline{w} &= \frac{-0.5229 + \cdots + 1.1367}{6} \simeq 0.4981\\
+			\overline{z^{2}} &= \frac{0.0240 + \cdots + 0.1446}{6} \simeq 0.0757\\
+			\overline{w^{2}} &= \frac{0.2734 + \cdots + 1.2921}{6} \simeq 0.6933\\
+			\overline{zw} &= \frac{0.0810 + \cdots + 0.4322}{6} \simeq 0.2290.
+		\end{align}
+		これより, 標準偏差 $s_{z}$, $s_{w}$ および共分散 $s_{zw}$ は
+		\begin{align}
+			s_{z} &= \sqrt{\overline{z^{2}} - {\overline{z}}^{2}} = \sqrt{0.0757 - 0.1694^{2}} \simeq \sqrt{0.0470}, \\
+			s_{w} &= \sqrt{\overline{w^{2}} - {\overline{w}}^{2}} = \sqrt{0.6933 - 0.4981^{2}} \simeq \sqrt{0.4452}, \\
+			s_{zw} &= \overline{zw} - \overline{z}\cdot \overline{w} = 0.2290 - 0.1694\cdot 0.4981 \simeq 0.1446.
+		\end{align}
+		よって, 相関係数 $r_{zw}$ は
+		\begin{align}
+			r_{zw} = \frac{s_{zw}}{s_{z}s_{w}} = \frac{0.1446}{\sqrt{0.0470}\cdot \sqrt{0.4452}} = \red{0.9996}.
+		\end{align}
 	}
 \end{qenumerate}
